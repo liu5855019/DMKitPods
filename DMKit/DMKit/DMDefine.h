@@ -148,6 +148,7 @@
 
 
 #pragma mark - << 国际化 >>
+
 //获取字符串
 #define kLocStr(str) NSLocalizedString(str, nil)
 #define kLocStrTab(str,file) NSLocalizedStringFromTable(str, file, nil)
