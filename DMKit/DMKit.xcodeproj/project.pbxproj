@@ -7,11 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA19E7E2315218D0048A4B4 /* DMLanguageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19E742315218C0048A4B4 /* DMLanguageTool.m */; };
+		0AA19E7F2315218D0048A4B4 /* LocationTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19E752315218C0048A4B4 /* LocationTool.h */; };
+		0AA19E802315218D0048A4B4 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19E762315218C0048A4B4 /* LocationTool.m */; };
+		0AA19E812315218D0048A4B4 /* DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19E772315218C0048A4B4 /* DMTools.h */; };
+		0AA19E822315218D0048A4B4 /* DMLanguageTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19E782315218C0048A4B4 /* DMLanguageTool.h */; };
+		0AA19E832315218D0048A4B4 /* DMCopyUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19E792315218C0048A4B4 /* DMCopyUserInfo.m */; };
+		0AA19E842315218D0048A4B4 /* ImagePickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19E7A2315218C0048A4B4 /* ImagePickerTool.m */; };
+		0AA19E852315218D0048A4B4 /* DMCopyUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19E7B2315218C0048A4B4 /* DMCopyUserInfo.h */; };
+		0AA19E862315218D0048A4B4 /* ImagePickerTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19E7C2315218D0048A4B4 /* ImagePickerTool.h */; };
+		0AA19E872315218D0048A4B4 /* DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19E7D2315218D0048A4B4 /* DMTools.m */; };
+		0AA19EB22315242E0048A4B4 /* NSArray+DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19E9A2315242E0048A4B4 /* NSArray+DMTools.h */; };
+		0AA19EBB2315242E0048A4B4 /* NSArray+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19EA32315242E0048A4B4 /* NSArray+DMTools.m */; };
+		0AA19EED231528330048A4B4 /* DMCopyTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19EEB231528330048A4B4 /* DMCopyTools.h */; };
+		0AA19EEE231528330048A4B4 /* DMCopyTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19EEC231528330048A4B4 /* DMCopyTools.m */; };
+		0AA19EF12315286F0048A4B4 /* DMCopyNet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19EEF2315286F0048A4B4 /* DMCopyNet.h */; };
+		0AA19EF22315286F0048A4B4 /* DMCopyNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19EF02315286F0048A4B4 /* DMCopyNet.m */; };
+		0AA19EF823152C4F0048A4B4 /* DMBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19EF423152C4E0048A4B4 /* DMBaseNavigationController.m */; };
+		0AA19EF923152C4F0048A4B4 /* DMBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19EF523152C4F0048A4B4 /* DMBaseViewController.h */; };
+		0AA19EFA23152C4F0048A4B4 /* DMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19EF623152C4F0048A4B4 /* DMBaseViewController.m */; };
+		0AA19EFB23152C4F0048A4B4 /* DMBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19EF723152C4F0048A4B4 /* DMBaseNavigationController.h */; };
+		0AA19EFE23152CFE0048A4B4 /* UIViewController+DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19EFC23152CFE0048A4B4 /* UIViewController+DMTools.h */; };
+		0AA19EFF23152CFE0048A4B4 /* UIViewController+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19EFD23152CFE0048A4B4 /* UIViewController+DMTools.m */; };
+		0AA19F0223152D5B0048A4B4 /* UINavigationBar+DMTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA19F0023152D5B0048A4B4 /* UINavigationBar+DMTools.h */; };
+		0AA19F0323152D5B0048A4B4 /* UINavigationBar+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA19F0123152D5B0048A4B4 /* UINavigationBar+DMTools.m */; };
 		0ADC6CAA2314C9EC00678832 /* DMKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADC6CA82314C9EC00678832 /* DMKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0ADC6CB12314CA3000678832 /* DMDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADC6CB02314CA3000678832 /* DMDefine.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA19E742315218C0048A4B4 /* DMLanguageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLanguageTool.m; sourceTree = "<group>"; };
+		0AA19E752315218C0048A4B4 /* LocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
+		0AA19E762315218C0048A4B4 /* LocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTool.m; sourceTree = "<group>"; };
+		0AA19E772315218C0048A4B4 /* DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTools.h; sourceTree = "<group>"; };
+		0AA19E782315218C0048A4B4 /* DMLanguageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLanguageTool.h; sourceTree = "<group>"; };
+		0AA19E792315218C0048A4B4 /* DMCopyUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCopyUserInfo.m; sourceTree = "<group>"; };
+		0AA19E7A2315218C0048A4B4 /* ImagePickerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerTool.m; sourceTree = "<group>"; };
+		0AA19E7B2315218C0048A4B4 /* DMCopyUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCopyUserInfo.h; sourceTree = "<group>"; };
+		0AA19E7C2315218D0048A4B4 /* ImagePickerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerTool.h; sourceTree = "<group>"; };
+		0AA19E7D2315218D0048A4B4 /* DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTools.m; sourceTree = "<group>"; };
+		0AA19E9A2315242E0048A4B4 /* NSArray+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DMTools.h"; sourceTree = "<group>"; };
+		0AA19EA32315242E0048A4B4 /* NSArray+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DMTools.m"; sourceTree = "<group>"; };
+		0AA19EEB231528330048A4B4 /* DMCopyTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMCopyTools.h; sourceTree = "<group>"; };
+		0AA19EEC231528330048A4B4 /* DMCopyTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMCopyTools.m; sourceTree = "<group>"; };
+		0AA19EEF2315286F0048A4B4 /* DMCopyNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMCopyNet.h; sourceTree = "<group>"; };
+		0AA19EF02315286F0048A4B4 /* DMCopyNet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMCopyNet.m; sourceTree = "<group>"; };
+		0AA19EF423152C4E0048A4B4 /* DMBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBaseNavigationController.m; sourceTree = "<group>"; };
+		0AA19EF523152C4F0048A4B4 /* DMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseViewController.h; sourceTree = "<group>"; };
+		0AA19EF623152C4F0048A4B4 /* DMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBaseViewController.m; sourceTree = "<group>"; };
+		0AA19EF723152C4F0048A4B4 /* DMBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseNavigationController.h; sourceTree = "<group>"; };
+		0AA19EFC23152CFE0048A4B4 /* UIViewController+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DMTools.h"; sourceTree = "<group>"; };
+		0AA19EFD23152CFE0048A4B4 /* UIViewController+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DMTools.m"; sourceTree = "<group>"; };
+		0AA19F0023152D5B0048A4B4 /* UINavigationBar+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+DMTools.h"; sourceTree = "<group>"; };
+		0AA19F0123152D5B0048A4B4 /* UINavigationBar+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DMTools.m"; sourceTree = "<group>"; };
 		0ADC6CA52314C9EC00678832 /* DMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ADC6CA82314C9EC00678832 /* DMKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMKit.h; sourceTree = "<group>"; };
 		0ADC6CA92314C9EC00678832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +77,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA19E73231521640048A4B4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0ADC6CB02314CA3000678832 /* DMDefine.h */,
+				0AA19E772315218C0048A4B4 /* DMTools.h */,
+				0AA19E7D2315218D0048A4B4 /* DMTools.m */,
+				0AA19E782315218C0048A4B4 /* DMLanguageTool.h */,
+				0AA19E742315218C0048A4B4 /* DMLanguageTool.m */,
+				0AA19E7C2315218D0048A4B4 /* ImagePickerTool.h */,
+				0AA19E7A2315218C0048A4B4 /* ImagePickerTool.m */,
+				0AA19E752315218C0048A4B4 /* LocationTool.h */,
+				0AA19E762315218C0048A4B4 /* LocationTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0AA19E88231524130048A4B4 /* DMBase */ = {
+			isa = PBXGroup;
+			children = (
+				0AA19EF723152C4F0048A4B4 /* DMBaseNavigationController.h */,
+				0AA19EF423152C4E0048A4B4 /* DMBaseNavigationController.m */,
+			);
+			path = DMBase;
+			sourceTree = "<group>";
+		};
+		0AA19E912315242E0048A4B4 /* DMCategory */ = {
+			isa = PBXGroup;
+			children = (
+				0AA19EFC23152CFE0048A4B4 /* UIViewController+DMTools.h */,
+				0AA19EFD23152CFE0048A4B4 /* UIViewController+DMTools.m */,
+				0AA19F0023152D5B0048A4B4 /* UINavigationBar+DMTools.h */,
+				0AA19F0123152D5B0048A4B4 /* UINavigationBar+DMTools.m */,
+				0AA19E9A2315242E0048A4B4 /* NSArray+DMTools.h */,
+				0AA19EA32315242E0048A4B4 /* NSArray+DMTools.m */,
+			);
+			path = DMCategory;
+			sourceTree = "<group>";
+		};
+		0AA19EC2231524360048A4B4 /* DMViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DMViews;
+			sourceTree = "<group>";
+		};
+		0AA19EF3231528820048A4B4 /* DMCopy */ = {
+			isa = PBXGroup;
+			children = (
+				0AA19E7B2315218C0048A4B4 /* DMCopyUserInfo.h */,
+				0AA19E792315218C0048A4B4 /* DMCopyUserInfo.m */,
+				0AA19EEB231528330048A4B4 /* DMCopyTools.h */,
+				0AA19EEC231528330048A4B4 /* DMCopyTools.m */,
+				0AA19EEF2315286F0048A4B4 /* DMCopyNet.h */,
+				0AA19EF02315286F0048A4B4 /* DMCopyNet.m */,
+				0AA19EF523152C4F0048A4B4 /* DMBaseViewController.h */,
+				0AA19EF623152C4F0048A4B4 /* DMBaseViewController.m */,
+			);
+			path = DMCopy;
+			sourceTree = "<group>";
+		};
 		0ADC6C9B2314C9EB00678832 = {
 			isa = PBXGroup;
 			children = (
@@ -48,7 +156,11 @@
 		0ADC6CA72314C9EC00678832 /* DMKit */ = {
 			isa = PBXGroup;
 			children = (
-				0ADC6CB02314CA3000678832 /* DMDefine.h */,
+				0AA19EF3231528820048A4B4 /* DMCopy */,
+				0AA19EC2231524360048A4B4 /* DMViews */,
+				0AA19E912315242E0048A4B4 /* DMCategory */,
+				0AA19E88231524130048A4B4 /* DMBase */,
+				0AA19E73231521640048A4B4 /* Tools */,
 				0ADC6CA82314C9EC00678832 /* DMKit.h */,
 				0ADC6CA92314C9EC00678832 /* Info.plist */,
 			);
@@ -62,7 +174,19 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA19EFE23152CFE0048A4B4 /* UIViewController+DMTools.h in Headers */,
+				0AA19EF12315286F0048A4B4 /* DMCopyNet.h in Headers */,
+				0AA19EED231528330048A4B4 /* DMCopyTools.h in Headers */,
+				0AA19E862315218D0048A4B4 /* ImagePickerTool.h in Headers */,
+				0AA19E7F2315218D0048A4B4 /* LocationTool.h in Headers */,
+				0AA19E852315218D0048A4B4 /* DMCopyUserInfo.h in Headers */,
+				0AA19EB22315242E0048A4B4 /* NSArray+DMTools.h in Headers */,
+				0AA19EFB23152C4F0048A4B4 /* DMBaseNavigationController.h in Headers */,
+				0AA19E822315218D0048A4B4 /* DMLanguageTool.h in Headers */,
+				0AA19F0223152D5B0048A4B4 /* UINavigationBar+DMTools.h in Headers */,
+				0AA19E812315218D0048A4B4 /* DMTools.h in Headers */,
 				0ADC6CB12314CA3000678832 /* DMDefine.h in Headers */,
+				0AA19EF923152C4F0048A4B4 /* DMBaseViewController.h in Headers */,
 				0ADC6CAA2314C9EC00678832 /* DMKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +258,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA19E802315218D0048A4B4 /* LocationTool.m in Sources */,
+				0AA19EF22315286F0048A4B4 /* DMCopyNet.m in Sources */,
+				0AA19EBB2315242E0048A4B4 /* NSArray+DMTools.m in Sources */,
+				0AA19E872315218D0048A4B4 /* DMTools.m in Sources */,
+				0AA19F0323152D5B0048A4B4 /* UINavigationBar+DMTools.m in Sources */,
+				0AA19E7E2315218D0048A4B4 /* DMLanguageTool.m in Sources */,
+				0AA19E832315218D0048A4B4 /* DMCopyUserInfo.m in Sources */,
+				0AA19EFA23152C4F0048A4B4 /* DMBaseViewController.m in Sources */,
+				0AA19E842315218D0048A4B4 /* ImagePickerTool.m in Sources */,
+				0AA19EFF23152CFE0048A4B4 /* UIViewController+DMTools.m in Sources */,
+				0AA19EF823152C4F0048A4B4 /* DMBaseNavigationController.m in Sources */,
+				0AA19EEE231528330048A4B4 /* DMCopyTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +405,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DMKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,6 +429,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DMKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

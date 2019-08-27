@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for DMKit.
-FOUNDATION_EXPORT double DMKitVersionNumber;
 
-//! Project version string for DMKit.
-FOUNDATION_EXPORT const unsigned char DMKitVersionString[];
+#if __has_include(<DMKit/DMKit.h>)
 
-// In this header, you should import all the public headers of your framework using statements like #import <DMKit/PublicHeader.h>
+//Tools
+#import <DMKit/DMDefine.h>
+#import <DMKit/DMTools.h>
+#import <DMKit/DMLanguageTool.h>
+#import <DMKit/ImagePickerTool.h>
+#import <DMKit/LocationTool.h>
 
 
+
+
+
+#else
+//#import "NSObject+YYModel.h"
+//#import "YYClassInfo.h"
+#endif
