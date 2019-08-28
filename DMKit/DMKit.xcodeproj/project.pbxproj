@@ -43,6 +43,7 @@
 		0A9A6EA823167603006F2667 /* DMShowBigImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */; };
 		0A9A6EA923167603006F2667 /* DMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9E23167603006F2667 /* DMBasePickerView.m */; };
 		0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9F23167603006F2667 /* DMWKWebView.m */; };
+		0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6EAC231685A0006F2667 /* DMScreen.m */; };
 		37FE193A2CDE02A6BDE72863 /* Pods_DMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		0A9A6E9E23167603006F2667 /* DMBasePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBasePickerView.m; sourceTree = "<group>"; };
 		0A9A6E9F23167603006F2667 /* DMWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWKWebView.m; sourceTree = "<group>"; };
 		0A9A6EA023167603006F2667 /* DMBasePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBasePickerView.h; sourceTree = "<group>"; };
+		0A9A6EAB231685A0006F2667 /* DMScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMScreen.h; sourceTree = "<group>"; };
+		0A9A6EAC231685A0006F2667 /* DMScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMScreen.m; sourceTree = "<group>"; };
 		945797C92644181D349F23E6 /* Pods-DMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMKit.release.xcconfig"; path = "Target Support Files/Pods-DMKit/Pods-DMKit.release.xcconfig"; sourceTree = "<group>"; };
 		E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -274,6 +277,8 @@
 				0A9A6E20231622A4006F2667 /* LocationTool.m */,
 				0A9A6E24231622A4006F2667 /* ImagePickerTool.h */,
 				0A9A6E1F231622A4006F2667 /* ImagePickerTool.m */,
+				0A9A6EAB231685A0006F2667 /* DMScreen.h */,
+				0A9A6EAC231685A0006F2667 /* DMScreen.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 				0A9A6EA523167603006F2667 /* DMAlertView.m in Sources */,
 				0A9A6E4B231635CA006F2667 /* UIView+DMTools.m in Sources */,
 				0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */,
+				0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */,
 				0A9A6E2A231622A4006F2667 /* DMCopyNet.m in Sources */,
 				0A9A6E28231622A4006F2667 /* DMBaseNavigationController.m in Sources */,
 				0A9A6EA223167603006F2667 /* DMShadowView.m in Sources */,

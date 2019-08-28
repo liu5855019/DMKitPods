@@ -10,13 +10,12 @@
 //
 //#import "UserInfo.h"
 //
+//#import "DMDefine.h"
+//
 //static NSString * const kUserInfo = @"kUserInfo";
 //
 //
 //@interface UserInfo ()
-//
-//@property (nonatomic , assign) CGFloat scaleH;
-//@property (nonatomic , assign) CGFloat scaleW;
 //
 //@end
 //
@@ -75,23 +74,6 @@
 //    [aCoder encodeObject:self.oldUserName forKey:@"oldUserName"];
 //}
 //
-//#pragma mark - Screen
-//
-//- (CGFloat)screenScaleH
-//{
-//    if (_scaleH == 0) {
-//        _scaleH = kScreenH / 667.0f;
-//    }
-//    return _scaleH;
-//}
-//
-//- (CGFloat)screenScaleW
-//{
-//    if (_scaleW == 0) {
-//        _scaleW = kScreenW / 375.0f;
-//    }
-//    return _scaleW;
-//}
 //
 //@end
-//
+
