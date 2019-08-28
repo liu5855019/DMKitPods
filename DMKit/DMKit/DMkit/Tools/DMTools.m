@@ -11,6 +11,7 @@
 #import "DMDefine.h"
 #import "NSArray+DMTools.h"
 
+#import <Toast/Toast.h>
 
 #include <objc/runtime.h>
 #import <sys/utsname.h>
@@ -190,8 +191,6 @@
     }));
 }
 
-
-
 #pragma mark - <<Alert & Sheet & Toast>>
 /** 弹出对话框,只有确定按钮 */
 + (void)showAlertWithTitle:(NSString *)title
@@ -298,7 +297,17 @@
     [vc presentViewController:alertController animated:YES completion:nil];
 }
 
+/** 在window上显示toast */
++ (void)showToastAtWindow:(NSString *)content
+{
+    [[UIApplication sharedApplication].keyWindow makeToast:content];
+}
 
+/** 在window上显示toast */
++ (void)showToastAtWindow:(NSString *)content duration:(NSTimeInterval)time position:(id)obj
+{
+    [[UIApplication sharedApplication].keyWindow makeToast:content duration:time position:obj];
+}
 
 #pragma mark - <<Tools>>
 

@@ -47,6 +47,11 @@
                      atVC:(__weak UIViewController *)vc
                     block:(void (^)(int index))block;
 
+/** 在window上显示toast */
++ (void)showToastAtWindow:(NSString *)content;
+
+/** 在window上显示toast */
++ (void)showToastAtWindow:(NSString *)content duration:(NSTimeInterval)time position:(id)obj;
 
 #pragma mark - <<Tools>>
 

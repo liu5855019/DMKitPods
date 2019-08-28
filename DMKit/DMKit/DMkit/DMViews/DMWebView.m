@@ -162,7 +162,8 @@
 
 
 
--(void)dealloc{
+- (void)dealloc
+{
     MyLog(@" Game Over ... ");
     
     [self.scrollView removeObserver:self forKeyPath:@"contentSize"];

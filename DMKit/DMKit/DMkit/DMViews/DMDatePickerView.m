@@ -79,7 +79,7 @@
 - (UIDatePicker *)timePicker
 {
     if (!_timePicker) {
-        _timePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 46, kScreenW, 180)];
+        _timePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 46, kScreenW, 162)];
         [_timePicker addTarget:self action:@selector(datePickerChange:) forControlEvents:UIControlEventValueChanged];
     }
     return _timePicker;

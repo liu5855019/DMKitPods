@@ -8,5 +8,9 @@ target 'DMKit' do
   # Pods for DMKit
 
   pod 'MBProgressHUD'     , '~> 1.1.0'
+  pod 'AFNetworking'      , '~> 3.2.1'
+  pod 'Masonry'           , '~> 1.1.0'
+  pod 'Toast'             , '~> 4.0.0'
+  pod 'SDWebImage'        , '~> 5.1.0'
   
 end
