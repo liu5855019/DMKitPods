@@ -33,8 +33,8 @@
 #define kLineH (1.0f / [UIScreen mainScreen].scale)
 
 //按比例设置view大小/字体大小等    这里要配合UserInfo单利使用
-#define kScaleH(value) ((value) * [UserInfo shareUser].screenScaleH)
-#define kScaleW(value) ((value) * [UserInfo shareUser].screenScaleW)
+#define kScaleH(value)  (value)             //((value) * [UserInfo shareUser].screenScaleH)
+#define kScaleW(value)  (value)                    //((value) * [UserInfo shareUser].screenScaleW)
 
 #define kGetX(v)            (v).frame.origin.x
 #define kGetY(v)            (v).frame.origin.y

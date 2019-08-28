@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,18 @@
 		0A9A6E31231622A4006F2667 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E20231622A4006F2667 /* LocationTool.m */; };
 		0A9A6E32231622A4006F2667 /* DMLanguageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E23231622A4006F2667 /* DMLanguageTool.m */; };
 		0A9A6E33231622A4006F2667 /* DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E26231622A4006F2667 /* DMTools.m */; };
+		0A9A6E46231635CA006F2667 /* UILabel+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E34231635BC006F2667 /* UILabel+DMTools.m */; };
+		0A9A6E47231635CA006F2667 /* NSDate+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E39231635C4006F2667 /* NSDate+DMTools.m */; };
+		0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E3B231635C5006F2667 /* UIImage+DMTools.m */; };
+		0A9A6E49231635CA006F2667 /* NSObject+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E3C231635C6006F2667 /* NSObject+DMTools.m */; };
+		0A9A6E4A231635CA006F2667 /* UIColor+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E3E231635C7006F2667 /* UIColor+DMTools.m */; };
+		0A9A6E4B231635CA006F2667 /* UIView+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E3F231635C7006F2667 /* UIView+DMTools.m */; };
+		0A9A6E4C231635CA006F2667 /* NSData+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E41231635C8006F2667 /* NSData+DMTools.m */; };
+		0A9A6E4D231635CA006F2667 /* NSString+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E44231635CA006F2667 /* NSString+DMTools.m */; };
+		0A9A6E4E231635CA006F2667 /* CADisplayLink+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */; };
+		0A9A6E652316383C006F2667 /* DMShowBigImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E552316383A006F2667 /* DMShowBigImageView.m */; };
+		0A9A6E662316383C006F2667 /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E582316383A006F2667 /* DMWebView.m */; };
+		0A9A6E6B2316383D006F2667 /* DMDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E602316383C006F2667 /* DMDatePickerView.m */; };
 		37FE193A2CDE02A6BDE72863 /* Pods_DMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +78,30 @@
 		0A9A6E25231622A4006F2667 /* LocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
 		0A9A6E26231622A4006F2667 /* DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTools.m; sourceTree = "<group>"; };
 		0A9A6E27231622A4006F2667 /* DMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMKit.h; sourceTree = "<group>"; };
+		0A9A6E34231635BC006F2667 /* UILabel+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E35231635BC006F2667 /* NSString+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E36231635BD006F2667 /* NSObject+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E37231635BD006F2667 /* CADisplayLink+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E38231635BF006F2667 /* UIColor+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E39231635C4006F2667 /* NSDate+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E3A231635C4006F2667 /* NSDate+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E3B231635C5006F2667 /* UIImage+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E3C231635C6006F2667 /* NSObject+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E3D231635C6006F2667 /* NSData+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E3E231635C7006F2667 /* UIColor+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E3F231635C7006F2667 /* UIView+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E40231635C8006F2667 /* UIView+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E41231635C8006F2667 /* NSData+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E42231635C8006F2667 /* UIImage+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E43231635C9006F2667 /* UILabel+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DMTools.h"; sourceTree = "<group>"; };
+		0A9A6E44231635CA006F2667 /* NSString+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+DMTools.m"; sourceTree = "<group>"; };
+		0A9A6E4F2316382E006F2667 /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
+		0A9A6E5223163838006F2667 /* DMDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDatePickerView.h; sourceTree = "<group>"; };
+		0A9A6E552316383A006F2667 /* DMShowBigImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMShowBigImageView.m; sourceTree = "<group>"; };
+		0A9A6E562316383A006F2667 /* DMShowBigImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShowBigImageView.h; sourceTree = "<group>"; };
+		0A9A6E582316383A006F2667 /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
+		0A9A6E602316383C006F2667 /* DMDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDatePickerView.m; sourceTree = "<group>"; };
 		945797C92644181D349F23E6 /* Pods-DMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMKit.release.xcconfig"; path = "Target Support Files/Pods-DMKit/Pods-DMKit.release.xcconfig"; sourceTree = "<group>"; };
 		E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,10 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				0A9A6E27231622A4006F2667 /* DMKit.h */,
+				0A9A6E6D23164F07006F2667 /* DMCopy */,
 				0A9A6E1D231622A4006F2667 /* Tools */,
 				0A9A6E09231622A0006F2667 /* DMBase */,
 				0A9A6E16231622A3006F2667 /* DMCategory */,
-				0A9A6E0C231622A1006F2667 /* DMCopy */,
 				0A9A6E15231622A1006F2667 /* DMViews */,
 			);
 			path = DMkit;
@@ -142,30 +178,23 @@
 		0A9A6E09231622A0006F2667 /* DMBase */ = {
 			isa = PBXGroup;
 			children = (
+				0A9A6E0F231622A1006F2667 /* DMBaseViewController.h */,
+				0A9A6E14231622A1006F2667 /* DMBaseViewController.m */,
 				0A9A6E0A231622A0006F2667 /* DMBaseNavigationController.h */,
 				0A9A6E0B231622A0006F2667 /* DMBaseNavigationController.m */,
 			);
 			path = DMBase;
 			sourceTree = "<group>";
 		};
-		0A9A6E0C231622A1006F2667 /* DMCopy */ = {
-			isa = PBXGroup;
-			children = (
-				0A9A6E0D231622A1006F2667 /* DMCopyNet.h */,
-				0A9A6E11231622A1006F2667 /* DMCopyNet.m */,
-				0A9A6E12231622A1006F2667 /* DMCopyTools.h */,
-				0A9A6E0E231622A1006F2667 /* DMCopyTools.m */,
-				0A9A6E10231622A1006F2667 /* DMCopyUserInfo.h */,
-				0A9A6E13231622A1006F2667 /* DMCopyUserInfo.m */,
-				0A9A6E0F231622A1006F2667 /* DMBaseViewController.h */,
-				0A9A6E14231622A1006F2667 /* DMBaseViewController.m */,
-			);
-			path = DMCopy;
-			sourceTree = "<group>";
-		};
 		0A9A6E15231622A1006F2667 /* DMViews */ = {
 			isa = PBXGroup;
 			children = (
+				0A9A6E5223163838006F2667 /* DMDatePickerView.h */,
+				0A9A6E602316383C006F2667 /* DMDatePickerView.m */,
+				0A9A6E562316383A006F2667 /* DMShowBigImageView.h */,
+				0A9A6E552316383A006F2667 /* DMShowBigImageView.m */,
+				0A9A6E4F2316382E006F2667 /* DMWebView.h */,
+				0A9A6E582316383A006F2667 /* DMWebView.m */,
 			);
 			path = DMViews;
 			sourceTree = "<group>";
@@ -179,6 +208,24 @@
 				0A9A6E17231622A3006F2667 /* UIViewController+DMTools.m */,
 				0A9A6E1A231622A3006F2667 /* UINavigationBar+DMTools.h */,
 				0A9A6E19231622A3006F2667 /* UINavigationBar+DMTools.m */,
+				0A9A6E37231635BD006F2667 /* CADisplayLink+DMTools.h */,
+				0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */,
+				0A9A6E3D231635C6006F2667 /* NSData+DMTools.h */,
+				0A9A6E41231635C8006F2667 /* NSData+DMTools.m */,
+				0A9A6E3A231635C4006F2667 /* NSDate+DMTools.h */,
+				0A9A6E39231635C4006F2667 /* NSDate+DMTools.m */,
+				0A9A6E36231635BD006F2667 /* NSObject+DMTools.h */,
+				0A9A6E3C231635C6006F2667 /* NSObject+DMTools.m */,
+				0A9A6E35231635BC006F2667 /* NSString+DMTools.h */,
+				0A9A6E44231635CA006F2667 /* NSString+DMTools.m */,
+				0A9A6E38231635BF006F2667 /* UIColor+DMTools.h */,
+				0A9A6E3E231635C7006F2667 /* UIColor+DMTools.m */,
+				0A9A6E42231635C8006F2667 /* UIImage+DMTools.h */,
+				0A9A6E3B231635C5006F2667 /* UIImage+DMTools.m */,
+				0A9A6E43231635C9006F2667 /* UILabel+DMTools.h */,
+				0A9A6E34231635BC006F2667 /* UILabel+DMTools.m */,
+				0A9A6E40231635C8006F2667 /* UIView+DMTools.h */,
+				0A9A6E3F231635C7006F2667 /* UIView+DMTools.m */,
 			);
 			path = DMCategory;
 			sourceTree = "<group>";
@@ -197,6 +244,19 @@
 				0A9A6E1F231622A4006F2667 /* ImagePickerTool.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		0A9A6E6D23164F07006F2667 /* DMCopy */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A6E0D231622A1006F2667 /* DMCopyNet.h */,
+				0A9A6E11231622A1006F2667 /* DMCopyNet.m */,
+				0A9A6E12231622A1006F2667 /* DMCopyTools.h */,
+				0A9A6E0E231622A1006F2667 /* DMCopyTools.m */,
+				0A9A6E10231622A1006F2667 /* DMCopyUserInfo.h */,
+				0A9A6E13231622A1006F2667 /* DMCopyUserInfo.m */,
+			);
+			name = DMCopy;
 			sourceTree = "<group>";
 		};
 		80315AB490425AF24EE1CA38 /* Frameworks */ = {
@@ -218,6 +278,7 @@
 				0A9A6DEB23162203006F2667 /* Sources */,
 				0A9A6DEC23162203006F2667 /* Frameworks */,
 				0A9A6DED23162203006F2667 /* Resources */,
+				DFF3BA9E3A33DBF6A6B896C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +357,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DFF3BA9E3A33DBF6A6B896C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DMKit/Pods-DMKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DMKit/Pods-DMKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DMKit/Pods-DMKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,19 +382,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9A6E2E231622A4006F2667 /* UINavigationBar+DMTools.m in Sources */,
+				0A9A6E4C231635CA006F2667 /* NSData+DMTools.m in Sources */,
 				0A9A6DF723162203006F2667 /* ViewController.m in Sources */,
+				0A9A6E4A231635CA006F2667 /* UIColor+DMTools.m in Sources */,
 				0A9A6E2D231622A4006F2667 /* UIViewController+DMTools.m in Sources */,
 				0A9A6E30231622A4006F2667 /* ImagePickerTool.m in Sources */,
+				0A9A6E47231635CA006F2667 /* NSDate+DMTools.m in Sources */,
+				0A9A6E6B2316383D006F2667 /* DMDatePickerView.m in Sources */,
+				0A9A6E4E231635CA006F2667 /* CADisplayLink+DMTools.m in Sources */,
 				0A9A6E2F231622A4006F2667 /* NSArray+DMTools.m in Sources */,
+				0A9A6E49231635CA006F2667 /* NSObject+DMTools.m in Sources */,
 				0A9A6E0223162207006F2667 /* main.m in Sources */,
 				0A9A6E33231622A4006F2667 /* DMTools.m in Sources */,
+				0A9A6E46231635CA006F2667 /* UILabel+DMTools.m in Sources */,
 				0A9A6E2B231622A4006F2667 /* DMCopyUserInfo.m in Sources */,
 				0A9A6DF423162203006F2667 /* AppDelegate.m in Sources */,
+				0A9A6E662316383C006F2667 /* DMWebView.m in Sources */,
 				0A9A6E2C231622A4006F2667 /* DMBaseViewController.m in Sources */,
 				0A9A6E31231622A4006F2667 /* LocationTool.m in Sources */,
 				0A9A6E32231622A4006F2667 /* DMLanguageTool.m in Sources */,
+				0A9A6E652316383C006F2667 /* DMShowBigImageView.m in Sources */,
+				0A9A6E4B231635CA006F2667 /* UIView+DMTools.m in Sources */,
+				0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */,
 				0A9A6E2A231622A4006F2667 /* DMCopyNet.m in Sources */,
 				0A9A6E28231622A4006F2667 /* DMBaseNavigationController.m in Sources */,
+				0A9A6E4D231635CA006F2667 /* NSString+DMTools.m in Sources */,
 				0A9A6E29231622A4006F2667 /* DMCopyTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
