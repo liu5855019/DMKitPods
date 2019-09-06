@@ -37,13 +37,13 @@
 		0A9A6EA223167603006F2667 /* DMShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E8F23167602006F2667 /* DMShadowView.m */; };
 		0A9A6EA323167603006F2667 /* DMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9223167602006F2667 /* DMPickerView.m */; };
 		0A9A6EA423167603006F2667 /* DMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9423167602006F2667 /* DMSegmentView.m */; };
-		0A9A6EA523167603006F2667 /* DMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9623167603006F2667 /* DMAlertView.m */; };
 		0A9A6EA623167603006F2667 /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9923167603006F2667 /* DMWebView.m */; };
 		0A9A6EA723167603006F2667 /* DMItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9B23167603006F2667 /* DMItemsView.m */; };
 		0A9A6EA823167603006F2667 /* DMShowBigImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */; };
 		0A9A6EA923167603006F2667 /* DMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9E23167603006F2667 /* DMBasePickerView.m */; };
 		0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9F23167603006F2667 /* DMWKWebView.m */; };
 		0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6EAC231685A0006F2667 /* DMScreen.m */; };
+		0AFDEC172322511800047E03 /* DMBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDEC162322511800047E03 /* DMBaseAlertView.m */; };
 		37FE193A2CDE02A6BDE72863 /* Pods_DMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,10 +107,8 @@
 		0A9A6E9023167602006F2667 /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
 		0A9A6E9123167602006F2667 /* DMShowBigImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShowBigImageView.h; sourceTree = "<group>"; };
 		0A9A6E9223167602006F2667 /* DMPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPickerView.m; sourceTree = "<group>"; };
-		0A9A6E9323167602006F2667 /* DMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAlertView.h; sourceTree = "<group>"; };
 		0A9A6E9423167602006F2667 /* DMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSegmentView.m; sourceTree = "<group>"; };
 		0A9A6E9523167602006F2667 /* DMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPickerView.h; sourceTree = "<group>"; };
-		0A9A6E9623167603006F2667 /* DMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAlertView.m; sourceTree = "<group>"; };
 		0A9A6E9723167603006F2667 /* DMShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShadowView.h; sourceTree = "<group>"; };
 		0A9A6E9823167603006F2667 /* DMSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSegmentView.h; sourceTree = "<group>"; };
 		0A9A6E9923167603006F2667 /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
@@ -123,6 +121,8 @@
 		0A9A6EA023167603006F2667 /* DMBasePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBasePickerView.h; sourceTree = "<group>"; };
 		0A9A6EAB231685A0006F2667 /* DMScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMScreen.h; sourceTree = "<group>"; };
 		0A9A6EAC231685A0006F2667 /* DMScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMScreen.m; sourceTree = "<group>"; };
+		0AFDEC152322511800047E03 /* DMBaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseAlertView.h; sourceTree = "<group>"; };
+		0AFDEC162322511800047E03 /* DMBaseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBaseAlertView.m; sourceTree = "<group>"; };
 		945797C92644181D349F23E6 /* Pods-DMKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMKit.release.xcconfig"; path = "Target Support Files/Pods-DMKit/Pods-DMKit.release.xcconfig"; sourceTree = "<group>"; };
 		E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,8 +210,8 @@
 		0A9A6E15231622A1006F2667 /* DMViews */ = {
 			isa = PBXGroup;
 			children = (
-				0A9A6E9323167602006F2667 /* DMAlertView.h */,
-				0A9A6E9623167603006F2667 /* DMAlertView.m */,
+				0AFDEC152322511800047E03 /* DMBaseAlertView.h */,
+				0AFDEC162322511800047E03 /* DMBaseAlertView.m */,
 				0A9A6EA023167603006F2667 /* DMBasePickerView.h */,
 				0A9A6E9E23167603006F2667 /* DMBasePickerView.m */,
 				0A9A6E9523167602006F2667 /* DMPickerView.h */,
@@ -419,6 +419,7 @@
 				0A9A6EA723167603006F2667 /* DMItemsView.m in Sources */,
 				0A9A6E2E231622A4006F2667 /* UINavigationBar+DMTools.m in Sources */,
 				0A9A6E4C231635CA006F2667 /* NSData+DMTools.m in Sources */,
+				0AFDEC172322511800047E03 /* DMBaseAlertView.m in Sources */,
 				0A9A6DF723162203006F2667 /* ViewController.m in Sources */,
 				0A9A6E4A231635CA006F2667 /* UIColor+DMTools.m in Sources */,
 				0A9A6EA623167603006F2667 /* DMWebView.m in Sources */,
@@ -441,7 +442,6 @@
 				0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */,
 				0A9A6E31231622A4006F2667 /* LocationTool.m in Sources */,
 				0A9A6E32231622A4006F2667 /* DMLanguageTool.m in Sources */,
-				0A9A6EA523167603006F2667 /* DMAlertView.m in Sources */,
 				0A9A6E4B231635CA006F2667 /* UIView+DMTools.m in Sources */,
 				0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */,
 				0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */,
