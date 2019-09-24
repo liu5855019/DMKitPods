@@ -24,7 +24,6 @@
 		0A9A6E31231622A4006F2667 /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E20231622A4006F2667 /* LocationTool.m */; };
 		0A9A6E32231622A4006F2667 /* DMLanguageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E23231622A4006F2667 /* DMLanguageTool.m */; };
 		0A9A6E33231622A4006F2667 /* DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E26231622A4006F2667 /* DMTools.m */; };
-		0A9A6E46231635CA006F2667 /* UILabel+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E34231635BC006F2667 /* UILabel+DMTools.m */; };
 		0A9A6E47231635CA006F2667 /* NSDate+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E39231635C4006F2667 /* NSDate+DMTools.m */; };
 		0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E3B231635C5006F2667 /* UIImage+DMTools.m */; };
 		0A9A6E49231635CA006F2667 /* NSObject+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E3C231635C6006F2667 /* NSObject+DMTools.m */; };
@@ -83,7 +82,6 @@
 		0A9A6E25231622A4006F2667 /* LocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
 		0A9A6E26231622A4006F2667 /* DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTools.m; sourceTree = "<group>"; };
 		0A9A6E27231622A4006F2667 /* DMKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMKit.h; sourceTree = "<group>"; };
-		0A9A6E34231635BC006F2667 /* UILabel+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DMTools.m"; sourceTree = "<group>"; };
 		0A9A6E35231635BC006F2667 /* NSString+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DMTools.h"; sourceTree = "<group>"; };
 		0A9A6E36231635BD006F2667 /* NSObject+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DMTools.h"; sourceTree = "<group>"; };
 		0A9A6E37231635BD006F2667 /* CADisplayLink+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+DMTools.h"; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		0A9A6E40231635C8006F2667 /* UIView+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DMTools.h"; sourceTree = "<group>"; };
 		0A9A6E41231635C8006F2667 /* NSData+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DMTools.m"; sourceTree = "<group>"; };
 		0A9A6E42231635C8006F2667 /* UIImage+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMTools.h"; sourceTree = "<group>"; };
-		0A9A6E43231635C9006F2667 /* UILabel+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DMTools.h"; sourceTree = "<group>"; };
 		0A9A6E44231635CA006F2667 /* NSString+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DMTools.m"; sourceTree = "<group>"; };
 		0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+DMTools.m"; sourceTree = "<group>"; };
 		0A9A6E8D23167602006F2667 /* DMWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWKWebView.h; sourceTree = "<group>"; };
@@ -169,16 +166,8 @@
 		0A9A6DF123162203006F2667 /* DMKit */ = {
 			isa = PBXGroup;
 			children = (
+				0AD6734E2338C50E00186822 /* Project */,
 				0A9A6E082316221B006F2667 /* DMkit */,
-				0A9A6DF223162203006F2667 /* AppDelegate.h */,
-				0A9A6DF323162203006F2667 /* AppDelegate.m */,
-				0A9A6DF523162203006F2667 /* ViewController.h */,
-				0A9A6DF623162203006F2667 /* ViewController.m */,
-				0A9A6DF823162203006F2667 /* Main.storyboard */,
-				0A9A6DFB23162207006F2667 /* Assets.xcassets */,
-				0A9A6DFD23162207006F2667 /* LaunchScreen.storyboard */,
-				0A9A6E0023162207006F2667 /* Info.plist */,
-				0A9A6E0123162207006F2667 /* main.m */,
 			);
 			path = DMKit;
 			sourceTree = "<group>";
@@ -218,8 +207,8 @@
 				0A9A6E9223167602006F2667 /* DMPickerView.m */,
 				0A9A6E9D23167603006F2667 /* DMDatePickerView.h */,
 				0A9A6E8E23167602006F2667 /* DMDatePickerView.m */,
-				0A9A6E9B23167603006F2667 /* DMItemsView.m */,
 				0A9A6E9A23167603006F2667 /* DMItemsView.h */,
+				0A9A6E9B23167603006F2667 /* DMItemsView.m */,
 				0A9A6E9823167603006F2667 /* DMSegmentView.h */,
 				0A9A6E9423167602006F2667 /* DMSegmentView.m */,
 				0A9A6E9123167602006F2667 /* DMShowBigImageView.h */,
@@ -257,8 +246,6 @@
 				0A9A6E3E231635C7006F2667 /* UIColor+DMTools.m */,
 				0A9A6E42231635C8006F2667 /* UIImage+DMTools.h */,
 				0A9A6E3B231635C5006F2667 /* UIImage+DMTools.m */,
-				0A9A6E43231635C9006F2667 /* UILabel+DMTools.h */,
-				0A9A6E34231635BC006F2667 /* UILabel+DMTools.m */,
 				0A9A6E40231635C8006F2667 /* UIView+DMTools.h */,
 				0A9A6E3F231635C7006F2667 /* UIView+DMTools.m */,
 			);
@@ -292,6 +279,22 @@
 				0A9A6E13231622A1006F2667 /* DMCopyUserInfo.m */,
 			);
 			path = DMCopy;
+			sourceTree = "<group>";
+		};
+		0AD6734E2338C50E00186822 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				0A9A6DF223162203006F2667 /* AppDelegate.h */,
+				0A9A6DF323162203006F2667 /* AppDelegate.m */,
+				0A9A6DF523162203006F2667 /* ViewController.h */,
+				0A9A6DF623162203006F2667 /* ViewController.m */,
+				0A9A6DF823162203006F2667 /* Main.storyboard */,
+				0A9A6DFB23162207006F2667 /* Assets.xcassets */,
+				0A9A6DFD23162207006F2667 /* LaunchScreen.storyboard */,
+				0A9A6E0023162207006F2667 /* Info.plist */,
+				0A9A6E0123162207006F2667 /* main.m */,
+			);
+			name = Project;
 			sourceTree = "<group>";
 		};
 		80315AB490425AF24EE1CA38 /* Frameworks */ = {
@@ -433,7 +436,6 @@
 				0A9A6E49231635CA006F2667 /* NSObject+DMTools.m in Sources */,
 				0A9A6E0223162207006F2667 /* main.m in Sources */,
 				0A9A6E33231622A4006F2667 /* DMTools.m in Sources */,
-				0A9A6E46231635CA006F2667 /* UILabel+DMTools.m in Sources */,
 				0A9A6EA123167603006F2667 /* DMDatePickerView.m in Sources */,
 				0A9A6EA923167603006F2667 /* DMBasePickerView.m in Sources */,
 				0A9A6E2B231622A4006F2667 /* DMCopyUserInfo.m in Sources */,
@@ -593,7 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C834GUTVBG;
+				DEVELOPMENT_TEAM = VY74KE25H2;
 				INFOPLIST_FILE = DMKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,7 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C834GUTVBG;
+				DEVELOPMENT_TEAM = VY74KE25H2;
 				INFOPLIST_FILE = DMKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

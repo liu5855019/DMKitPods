@@ -11,13 +11,10 @@
 @implementation NSObject (DMTools)
 
 
-- (BOOL)isNullObject
+/// 非NSNull的 obj
+- (BOOL)isObject;
 {
-    if (!self || [self isKindOfClass:[NSNull class]]) {
-        return YES;
-    }else{
-        return NO;
-    }
+    return [self isKindOfClass:[NSNull class]] ? NO : YES;
 }
 
 

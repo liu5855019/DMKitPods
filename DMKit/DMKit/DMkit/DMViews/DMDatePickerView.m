@@ -65,7 +65,7 @@
     [operateView addSubview:horizontalLine];
     
     UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, operateView.frame.size.width / 4 * 2, 45)];
-    timeLabel.text = [[NSDate date] getStringWithFormat:yyyyMMddHHmm];
+    timeLabel.text = [[NSDate date] stringWithFormat:yyyyMMddHHmm];
     timeLabel.textAlignment = NSTextAlignmentCenter;
     [operateView addSubview:timeLabel];
     self.timeLabel = timeLabel;
@@ -90,7 +90,7 @@
 - (void)show
 {
     [[UIApplication sharedApplication].keyWindow addSubview:self];
-    _timeLabel.text = [_timePicker.date getStringWithFormat:yyyyMMddHHmm];
+    _timeLabel.text = [_timePicker.date stringWithFormat:yyyyMMddHHmm];
     
     [UIView animateWithDuration:0.25f animations:^{
         self.alpha = 1;
@@ -112,7 +112,7 @@
 
 - (void)datePickerChange:(UIDatePicker *)sender
 {
-    _timeLabel.text = [sender.date getStringWithFormat:yyyyMMddHHmm];
+    _timeLabel.text = [sender.date stringWithFormat:yyyyMMddHHmm];
 }
 
 - (void)cancelAction
@@ -134,7 +134,7 @@
         NSDate *aDate = date ? date : [NSDate date];
         
         self.timePicker.date = aDate;
-        self.timeLabel.text = [aDate getStringWithFormat:yyyyMMddHHmm];
+        self.timeLabel.text = [aDate stringWithFormat:yyyyMMddHHmm];
         
         self.sureBlock = block;
     }

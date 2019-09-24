@@ -22,7 +22,7 @@
  */
 + (NSDateFormatter *)getDateFormatterWithFormatterString:(NSString *) formatterStr;
 /**
- *  dateformatter : @"yyyy-MM-dd HH:mm:ss"
+ *  dateformatter : @"yyyy/MM/dd HH:mm:ss"
  */
 + (NSDateFormatter *)getDetailDateFormatter;
 
@@ -37,7 +37,7 @@
 - (NSUInteger)second;
 
 - (NSUInteger)weekDay;          ///< 1...7
-- (NSString *)weekDayString;    ///< cn || en
+- (NSString *)weekDayString:(int)type;    ///< cn:0 || en:1
 
 
 
@@ -59,12 +59,12 @@
 /**
  *  从时间获得字符串
  */
-- (NSString *)getStringWithFormat:(NSString *)string;
+- (NSString *)stringWithFormat:(NSString *)string;
 
 /**
- *  从时间获得字符串: @"yyyy-MM-dd HH:mm:ss"
+ *  从时间获得字符串: @"yyyy/MM/dd HH:mm:ss"
  */
-- (NSString *)getStringWithDetailFormatter;
+- (NSString *)stringWithDetailFormatter;
 
 /**
  *  /Date(1477297275594+0800)/ ----> Date / nil

@@ -144,27 +144,11 @@
 
 #pragma mark - << String >>
 
-/** 字符串是否是空 */
-+ (BOOL)stringIsNull:(NSString *)string;
-
-/** 判断字符串是否全为空格 */
-+ (BOOL)stringIsAllWithSpace:(NSString *)string;
-
-/** 判断当前字符串跟数组里的字符串是否有相同的 */
-+ (BOOL) stringIsInArray:(NSArray *)array WithString:(NSString *)string;
-
 /** 计算文字所占位置大小 */
-+(CGRect) getRectByStr:(NSString *)str fontSize:(NSInteger )textSize maxW:(CGFloat)maxWidth maxH:(CGFloat)maxHeight;
-
-/** MD5 */
-+ (NSString *)MD5:(NSString *)string;
-
-/** 字符串转拼音 (没试过)*/
-+ (NSString *)stringToPinyinWithString:(NSString *)string;
++ (CGRect) getRectByStr:(NSString *)str fontSize:(NSInteger )textSize maxW:(CGFloat)maxWidth maxH:(CGFloat)maxHeight;
 
 /** 比较版本号大小 : 3.2.1 > 3.2.0    4 > 3.02.1  只有大于才会yes  其他no */
 + (BOOL)version1:(NSString *)str1 greatThanVersion2:(NSString *)str2;
-
 
 
 #pragma mark - << 正则匹配 >>
@@ -185,7 +169,7 @@
 + (BOOL)checkUserIdCard: (NSString *) idCard;
 
 /** 车牌号验证 */
-+ (BOOL) checkCarNumber:(NSString *) CarNumber;
++ (BOOL)checkCarNumber:(NSString *) CarNumber;
 
 
 

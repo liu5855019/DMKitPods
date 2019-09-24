@@ -10,20 +10,16 @@
 
 @interface NSString (DMTools)
 
-
-
-
-- (BOOL)isNullString;
-- (BOOL)isAllWithSpace;
-- (BOOL)isHaveSpace;
-
+/// 是否为有效字符串 (是字符串类型 && 长度大于0)
+- (BOOL)isStringWithLength;  
+/// 是否为有效字符串 且 不能全是空格
+- (BOOL)isStringWithoutAllSpace;
+/// 是否为有效字符串 且 不能包含空格
+- (BOOL)isStringWithoutSpace;
 
 - (BOOL)isEmail;
-- (BOOL)isInArray:(NSArray *)array;
-
 
 - (NSString *)pinyin;
-
 
 #pragma mark - Hash
 

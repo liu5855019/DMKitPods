@@ -8,10 +8,7 @@
 
 #import "DMLanguageTool.h"
 
-
-
 #define LANGUAGE_SET @"langeuageset"
-
 
 
 @interface DMLanguageTool()

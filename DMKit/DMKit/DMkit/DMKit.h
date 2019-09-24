@@ -18,6 +18,8 @@
 //#endif
 
 
+// Version : 1.2.0
+
 
 // Tools
 #import "DMDefine.h"
@@ -41,7 +43,6 @@
 #import "NSString+DMTools.h"
 #import "UIColor+DMTools.h"
 #import "UIImage+DMTools.h"
-#import "UILabel+DMTools.h"
 #import "UIView+DMTools.h"
 
 // View

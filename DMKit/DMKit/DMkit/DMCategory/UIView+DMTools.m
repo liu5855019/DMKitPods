@@ -93,30 +93,11 @@
 
 #pragma mark - << blockSet >>
 
-- (UIView * (^)(CGRect rect))dm_frame
-{
-    return ^(CGRect rect){
-        self.frame = rect;
-        return self;
-    };
-}
-
-- (UIView * (^)(UIColor *color))dm_bgColor
-{
-    return ^(UIColor *color){
-        self.backgroundColor = color;
-        return self;
-    };
-}
-
-
-
 /** 根据类名加载xib ---> View */
 + (__kindof UIView *) viewWithXibClassName:(NSString *)className
 {
     return [[NSBundle mainBundle] loadNibNamed:className owner:nil options:nil][0];
 }
-
 
 /** 增加默认阴影 */
 - (void)addBCShaadow

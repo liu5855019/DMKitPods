@@ -10,7 +10,8 @@
 
 @interface NSObject (DMTools)
 
-- (BOOL)isNullObject;
+/// 非NSNull的 obj
+- (BOOL)isObject;
 
 
 @end

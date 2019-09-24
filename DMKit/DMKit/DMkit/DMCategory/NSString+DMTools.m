@@ -16,42 +16,39 @@
 
 @implementation NSString (DMTools)
 
-
-- (BOOL)isNullString
+/// 是否为有效字符串 (是字符串类型 && 长度大于0)
+- (BOOL)isStringWithLength
 {
-    if (self.isNullObject) {
+    if ([self isKindOfClass:[NSString class]] &&
+        self.length > 0) {
         return YES;
     }
-    if (![self isKindOfClass:[NSString class]]) {
-        return YES;
-    }
-    if (self.length == 0 || [self isEqualToString:@""]) {
-        return YES;
-    }else{
-        return NO;
-    }
+    return NO;
 }
 
-- (BOOL)isAllWithSpace
+/// 是否为有效字符串 且 不能全是空格
+- (BOOL)isStringWithoutAllSpace
 {
-    if ([self isNullString]) {
-        return YES;
+    if ([self isStringWithLength]) {
+        NSString *str = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if (str.length != 0) {
+            return YES;
+        }
     }
-    NSString *str = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
-    return str.length == 0;
+    return NO;
 }
 
-
-
-- (BOOL)isHaveSpace
+/// 是否为有效字符串 且 不能包含空格
+- (BOOL)isStringWithoutSpace
 {
-    if ([self isAllWithSpace]) {
-        return YES;
+    if ([self isStringWithLength]) {
+        NSString *str = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if (str.length == self.length) {
+            return YES;
+        }
     }
-    NSString *str = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
-    return str.length != self.length;
+    return NO;
 }
-
 
 
 
@@ -61,17 +58,6 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
-
-- (BOOL)isInArray:(NSArray *)array
-{
-    for (NSString *string in array) {
-        if ([self isEqualToString:string]) {
-            return YES;
-        }
-    }
-    return NO;
-}
-
 
 - (NSString *)pinyin
 {

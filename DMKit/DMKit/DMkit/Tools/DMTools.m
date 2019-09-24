@@ -10,6 +10,7 @@
 
 #import "DMDefine.h"
 #import "NSArray+DMTools.h"
+#import "NSString+DMTools.h"
 
 #import <Toast/Toast.h>
 
@@ -500,9 +501,10 @@
 /** 文件是否存在 */
 + (BOOL)fileExist:(NSString*)path
 {
-    if ([self stringIsNull:path]) {
+    if (![path isStringWithLength]) {
         return NO;
     }
+    
     BOOL isDir;
     BOOL result = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir];
     if (!result) {
@@ -518,7 +520,7 @@
 /** 目录是否存在 */
 + (BOOL)directoryExist:(NSString*)dirPath
 {
-    if ([self stringIsNull:dirPath]) {
+    if (![dirPath isStringWithLength]) {
         return NO;
     }
     BOOL isDir = YES;
@@ -535,7 +537,7 @@
 /** 创建目录 */
 + (BOOL)createDirectory:(NSString*)dirPath
 {
-    if ([self stringIsNull:dirPath]) {
+    if (![dirPath isStringWithLength]) {
         return NO;
     }
     if ([self directoryExist:dirPath]) {
@@ -547,7 +549,7 @@
 /** 删除指定路径文件 */
 + (BOOL)deleteFileAtPath:(NSString *)filePath
 {
-    if ([self stringIsNull:filePath]) {
+    if (![filePath isStringWithLength]) {
         return NO;
     }
     return [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
@@ -556,7 +558,7 @@
 /** 删除指定目录 */
 + (BOOL)deleteDirectoryAtPath:(NSString *)dirPath
 {
-    if ([self stringIsNull:dirPath]) {
+    if (![dirPath isStringWithLength]) {
         return NO;
     }
     return [[NSFileManager defaultManager] removeItemAtPath:dirPath error:nil];
@@ -565,7 +567,7 @@
 /** 给出imageName获得图片 */
 + (UIImage *)getImageWithImageName:(NSString *)imageName
 {
-    if ([self stringIsNull:imageName]) {
+    if (![imageName isStringWithLength]) {
         return nil;
     }
     NSString *dirPath = [self filePathInDocuntsWithFile:@"Photos"];
@@ -595,7 +597,7 @@
 {
     NSData *data = [NSData dataWithContentsOfFile:oFile];
     
-    NSStringEncoding encoding =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     
     NSString *str = [[NSString alloc] initWithBytes:[data bytes] length:[data length] encoding:encoding];
     
@@ -604,76 +606,13 @@
 
 #pragma mark - << String >>
 
-/** 字符串是否是空 */
-+ (BOOL)stringIsNull:(NSString *)string
-{
-    if (![string isKindOfClass:[NSString class]]) {
-        return YES;
-    }
-    if (!string || [string isKindOfClass:[NSNull class]] || string.length == 0 || [string isEqualToString:@""]) {
-        return YES;
-    }else{
-        return NO;
-    }
-}
-
-/** 判断字符串是否全为空格 */
-+ (BOOL)stringIsAllWithSpace:(NSString *)string
-{
-    if ([self stringIsNull:string]) {
-        return YES;
-    }else{
-        NSString *trimString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        
-        if (trimString.length > 0) {
-            return NO;
-        }else{
-            return YES;
-        }
-    }
-}
-
-/** 判断当前字符串跟数组里的字符串是否有相同的 */
-+ (BOOL) stringIsInArray:(NSArray *)array WithString:(NSString *)string
-{
-    for (NSString *string1 in array) {
-        if ([string isEqualToString:string1]) {
-            return YES;
-        }
-    }
-    return NO;
-}
-
 /** 计算文字所占位置大小 */
-+(CGRect) getRectByStr:(NSString *)str fontSize:(NSInteger )textSize maxW:(CGFloat)maxWidth maxH:(CGFloat)maxHeight
++ (CGRect)getRectByStr:(NSString *)str fontSize:(NSInteger )textSize maxW:(CGFloat)maxWidth maxH:(CGFloat)maxHeight
 {
     return [str boundingRectWithSize:CGSizeMake(maxWidth, maxHeight)
                              options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading  |NSStringDrawingUsesLineFragmentOrigin
                           attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:textSize]}
                              context:nil];
-}
-
-/** MD5 */
-+ (NSString *)MD5:(NSString *)string
-{
-    const char* aString = [string UTF8String];
-    unsigned char result[16];
-    CC_MD5(aString, (unsigned int)strlen(aString), result);
-    NSString* hash = [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
-                      result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],
-                      result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
-    
-    return [hash lowercaseString];
-}
-
-/** 字符串转拼音 */
-+ (NSString *)stringToPinyinWithString:(NSString *)string
-{
-    NSMutableString *str = [string mutableCopy];
-    CFStringTransform(( CFMutableStringRef)str, NULL, kCFStringTransformMandarinLatin, NO);
-    CFStringTransform(( CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
-    
-    return [str stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 /** 比较版本号大小 : 3.2.1 > 3.2.0    4 > 3.02.1  只有大于才会yes  其他no */

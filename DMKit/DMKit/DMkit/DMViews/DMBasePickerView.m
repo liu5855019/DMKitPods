@@ -171,7 +171,7 @@
     [self.superview bringSubviewToFront:self];
     WeakObj(self);
     [UIView animateWithDuration:0.3 animations:^{
-        selfWeak.picker.frame = _upRect;
+        selfWeak.picker.frame = self->_upRect;
         [selfWeak layoutIfNeeded];
     }];
 }
@@ -183,7 +183,7 @@
     }
     
     [UIView animateWithDuration:0.3 animations:^{
-        selfWeak.picker.frame = _downRect;
+        selfWeak.picker.frame = self->_downRect;
         [selfWeak layoutIfNeeded];
     } completion:^(BOOL finished) {
         [super setHidden:YES];

@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.delegate = self;
     self.navigationBar.tintColor = [UIColor blackColor];
     //self.navigationBar.barTintColor = [UIColor whiteColor];

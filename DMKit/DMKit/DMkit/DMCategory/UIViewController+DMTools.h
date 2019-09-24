@@ -12,6 +12,7 @@
 
 @property (nonatomic , assign) CGFloat navAlpha;
 
+/// 将要销毁  (如果35秒后还未销毁,则疑似内存泄漏)
 - (void)willDealloc;
 
 

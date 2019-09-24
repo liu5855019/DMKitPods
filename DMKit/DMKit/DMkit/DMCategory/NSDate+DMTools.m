@@ -95,10 +95,11 @@
     return wDay;
 }
 
-- (NSString *)weekDayString
+/// cn:0 || en:1
+- (NSString *)weekDayString:(int)type;
 {
-    NSArray *weekArray =nil;
-    if ([DMTools isEnglish]) {
+    NSArray *weekArray;
+    if (type == 1) {
         weekArray = @[@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday", @"Saturday", @"Sunday"];
     } else {
         weekArray = @[@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六",@"星期日"];
@@ -169,7 +170,7 @@
 /**
  *  从时间获得字符串
  */
-- (NSString *)getStringWithFormat:(NSString *)string
+- (NSString *)stringWithFormat:(NSString *)string
 {
     return [[NSDate getDateFormatterWithFormatterString:string] stringFromDate:self];
 }
@@ -177,9 +178,9 @@
 /**
  *  从时间获得字符串: @"yyyy-MM-dd HH:mm:ss"
  */
-- (NSString *)getStringWithDetailFormatter
+- (NSString *)stringWithDetailFormatter;
 {
-    return [self getStringWithFormat:yyyyMMddHHmmss];
+    return [self stringWithFormat:yyyyMMddHHmmss];
 }
 
 /**

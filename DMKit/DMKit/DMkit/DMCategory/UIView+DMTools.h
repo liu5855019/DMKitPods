@@ -10,7 +10,7 @@
 
 @interface UIView (DMTools)
 
-#pragma mark - <<setter/getter>>
+#pragma mark - <<Setter / Getter>>
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
@@ -18,9 +18,6 @@
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
-
-- (UIView * (^)(CGRect rect))dm_frame;
-- (UIView * (^)(UIColor *color))dm_bgColor;
 
 
 /** 根据类名加载xib ---> View */
