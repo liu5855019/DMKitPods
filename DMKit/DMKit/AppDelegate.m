@@ -3,7 +3,7 @@
 //  DMKit
 //
 //  Created by iMac-03 on 2019/8/28.
-//  Copyright © 2019 daimu. All rights reserved.
+//  Copyright © 2019 呆木. All rights reserved.
 //
 
 #import "AppDelegate.h"

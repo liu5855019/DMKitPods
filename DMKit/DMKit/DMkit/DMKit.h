@@ -3,7 +3,7 @@
 //  DMKit
 //
 //  Created by iMac-03 on 2019/8/27.
-//  Copyright © 2019 daimu. All rights reserved.
+//  Copyright © 2019 呆木. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -18,7 +18,8 @@
 //#endif
 
 
-// Version : 1.2.0
+// Version : 1.2.1
+// 修改 项目 标记
 
 
 // Tools

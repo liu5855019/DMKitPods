@@ -1,8 +1,8 @@
 //
-//  product1
+//  DMKit
 //
-//  Created by 西安旺豆电子信息有限公司 on 16/6/30.
-//  Copyright © 2016年 西安旺豆电子信息有限公司. All rights reserved.
+//  Created by iMac-03 on 16/6/30.
+//  Copyright © 2016年 呆木. All rights reserved.
 //
 
 /** 所有东西拷贝下来

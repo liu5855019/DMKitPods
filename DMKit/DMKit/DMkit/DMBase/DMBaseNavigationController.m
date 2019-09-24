@@ -1,9 +1,9 @@
 //
 //  DMBaseNavigationController.m
-//  TinyBenefit
+//  DMKit
 //
-//  Created by 西安旺豆电子 on 2017/6/7.
-//  Copyright © 2017年 西安旺豆. All rights reserved.
+//  Created by iMac-03 on 2017/6/7.
+//  Copyright © 2017年 呆木. All rights reserved.
 //
 
 #import "DMBaseNavigationController.h"

@@ -1,9 +1,9 @@
 //
 //  LocationTool.m
-//  Apartment
+//  DMKit
 //
-//  Created by 西安旺豆电子信息有限公司 on 16/12/16.
-//  Copyright © 2016年 西安旺豆电子信息有限公司. All rights reserved.
+//  Created by iMac-03 on 16/12/16.
+//  Copyright © 2016年 呆木. All rights reserved.
 //
 
 #import "LocationTool.h"
