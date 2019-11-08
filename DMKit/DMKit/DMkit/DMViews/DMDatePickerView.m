@@ -34,6 +34,7 @@
     return self;
 }
 
+
 + (DMDatePickerView *)showWithBlock:(void (^)(NSDate *))block
 {
     DMDatePickerView *aView = [self pickerWithBlock:block];
@@ -66,6 +67,7 @@
     [aView show];
     return aView;
 }
+
 
 + (DMDatePickerView *)pickerWithBlock:(void (^)(NSDate *))block
 {
@@ -130,18 +132,14 @@
     _timeFormat = timeFormat;
     _sureBlock = block;
         
-    if (self = [super init]) {
-        
-    }
-    return self;
+    return [self init];
 }
-
 
 #pragma mark - Setup
 
 - (void)setupViews
 {
-    self.backgroundColor = kGetColorRGBA(0, 0, 0, 0.3);
+    self.backgroundColor = kGetColorRGBA(0, 0, 0, 0.25);
     self.alpha = 0;
     
     UIView *operateView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenH, kScreenW, kSAFE_BOTTOM_HEIGHT + 226)];
@@ -151,19 +149,19 @@
     [self addSubview:operateView];
     
     //垂直分割线
-    UILabel *leftVerticalLine = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, 0.5, 45)];
+    UILabel *leftVerticalLine = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, kLineH, 45)];
     leftVerticalLine.backgroundColor = [UIColor lightGrayColor];
     leftVerticalLine.alpha = 0.5;
     [operateView addSubview:leftVerticalLine];
 
     //垂直分割线
-    UILabel *rightVerticalLine = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4 * 3, 0, 0.5, 45)];
+    UILabel *rightVerticalLine = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4 * 3, 0, kLineH, 45)];
     rightVerticalLine.backgroundColor = [UIColor lightGrayColor];
     rightVerticalLine.alpha = 0.5;
     [operateView addSubview:rightVerticalLine];
 
     //水平分割线
-    UILabel *horizontalLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, operateView.frame.size.width, 0.5)];
+    UILabel *horizontalLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, operateView.frame.size.width, kLineH)];
     horizontalLine.backgroundColor = [UIColor lightGrayColor];
     horizontalLine.alpha = 0.5;
     [operateView addSubview:horizontalLine];
@@ -185,12 +183,11 @@
     [_sureBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
     
 
-    _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, operateView.frame.size.width / 4 * 2, 45)];
-    [operateView addSubview:_timeLabel];
-    
-    _timeLabel.textAlignment = NSTextAlignmentCenter;
-    _timeLabel.textColor = [UIColor grayColor];
-    _timeLabel.font = kFont(17);
+    _timeLab = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, operateView.frame.size.width / 4 * 2, 45)];
+    [operateView addSubview:_timeLab];
+    _timeLab.textAlignment = NSTextAlignmentCenter;
+    _timeLab.textColor = [UIColor grayColor];
+    _timeLab.font = kFont(17);
     
     
     [operateView addSubview:self.timePicker];
@@ -254,7 +251,7 @@
 {
     self.hidden = NO;
     [[UIApplication sharedApplication].keyWindow addSubview:self];
-    _timeLabel.text = [_timePicker.date stringWithFormat:self.timeFormat];
+    _timeLab.text = [_timePicker.date stringWithFormat:self.timeFormat];
     
     [UIView animateWithDuration:0.25f animations:^{
         self.alpha = 1;
@@ -295,7 +292,7 @@
 
 - (void)datePickerChange:(UIDatePicker *)sender
 {
-    _timeLabel.text = [sender.date stringWithFormat:self.timeFormat];
+    _timeLab.text = [sender.date stringWithFormat:self.timeFormat];
 }
 
 - (void)cancelAction

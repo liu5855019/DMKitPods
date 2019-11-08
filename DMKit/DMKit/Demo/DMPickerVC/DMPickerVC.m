@@ -16,7 +16,8 @@
 
 @property (nonatomic , strong) NSArray *datas;
 
-@property (nonatomic , strong) DMPickerView *picker;
+@property (nonatomic , strong) DMPickerView *stringPicker;
+@property (nonatomic , strong) DMPickerView *modelPicker;
 
 @end
 
@@ -31,8 +32,8 @@
     
     
     _datas = @[
-        @"Show picker",
-        @"Show picker 1"
+        @"Show String Picker",
+        @"Show Model Picker"
     ];
 }
 
@@ -79,23 +80,70 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.picker updateDatas:@[@"title 1",@"title 2",@"title 3"] withKey:nil];
-    
-    [self.picker show];
+    if (indexPath.row == 0) {
+        [self.stringPicker updateDatas:@[@"title 1",@"title 2",@"title 3"] withKey:nil];
+        [self.stringPicker show];
+    } else if (indexPath.row == 1) {
+        [self.modelPicker show];
+    }
 }
 
 #pragma mark - picker
 
-- (DMPickerView *)picker
+- (DMPickerView *)stringPicker
 {
-    if (_picker == nil) {
-        _picker = [[DMPickerView alloc] init];
-        
-        
+    if (_stringPicker == nil) {
+        _stringPicker = [[DMPickerView alloc] initWithBlock:^(NSInteger index, id obj) {
+            [DMTools showToastAtWindow:obj];
+        }];
     }
-    return _picker;
+    return _stringPicker;
 }
 
-
+- (DMPickerView *)modelPicker
+{
+    if (_modelPicker == nil) {
+        _modelPicker =
+        [DMPickerView pickerWithDatas:@[
+                [PickerModel modelWithName:@"model 0" index:0],
+                [PickerModel modelWithName:@"model 1" index:1],
+                [PickerModel modelWithName:@"model 2" index:2],
+                [PickerModel modelWithName:@"model 3" index:3],
+                [PickerModel modelWithName:@"model 4" index:4],
+                [PickerModel modelWithName:@"model 5" index:5],
+                [PickerModel modelWithName:@"model 6" index:6] ]
+                                  key:@"name"
+                            sureTitle:@"Sure"
+                          cancelTitle:nil
+                            sureColor:nil
+                          cancelColor:kRandomColor
+                                block:^(NSInteger index, id obj) {
+            PickerModel *model = obj;
+            [DMTools showToastAtWindow:model.name];
+        }];
+    }
+    return _modelPicker;
+}
 
 @end
+
+
+
+
+@implementation PickerModel
+
++ (instancetype)modelWithName:(NSString *)name index:(NSInteger)index
+{
+    PickerModel *model = [[PickerModel alloc] init];
+    model.name = name;
+    model.index = index;
+    return model;
+}
+
+@end
+
+
+
+
+
+

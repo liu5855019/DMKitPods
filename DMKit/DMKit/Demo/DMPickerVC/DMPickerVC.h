@@ -12,3 +12,13 @@
 
 @end
 
+@interface PickerModel : NSObject
+
+@property (nonatomic , copy) NSString *name;
+@property (nonatomic , assign) NSInteger index;
+
++ (instancetype)modelWithName:(NSString *)name
+                        index:(NSInteger)index;
+
+
+@end
