@@ -28,17 +28,18 @@
     //self.navigationBar.barTintColor = [UIColor whiteColor];
     
 }
-/*
- *  设置push的时候隐藏tabbar
- */
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (self.viewControllers.count >0) {
+
+/*   设置push的时候隐藏tabbar */
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
     self.popVC = nil;
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] init];
-    back.title = @"";
+    
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     viewController.navigationItem.backBarButtonItem = back;
+    
     [super pushViewController:viewController animated:animated];
 }
 
@@ -77,6 +78,7 @@
     //navigationBar.barTintColor = self.topViewController.navBarTintColor;
     navigationBar.navAlpha = self.topViewController.navAlpha;
 }
+
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item
 {
     //navigationBar.tintColor = self.topViewController.navTintColor;

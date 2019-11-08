@@ -13,19 +13,135 @@
 #import "NSDate+DMTools.h"
 #import "UIView+DMTools.h"
 
+@interface DMDatePickerView ()
+
+@property (nonatomic , strong) UIColor *sureColor;
+@property (nonatomic , strong) UIColor *cancelColor;
+@property (nonatomic , copy) NSString *sureTitle;
+@property (nonatomic , copy) NSString *cancelTitle;
+
+@end
+
 @implementation DMDatePickerView
+
+#pragma mark - Init
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH)]) {
+    if (self = [super initWithFrame:[UIScreen mainScreen].bounds]) {
         [self setupViews];
     }
     return self;
 }
 
++ (DMDatePickerView *)showWithBlock:(void (^)(NSDate *))block
+{
+    DMDatePickerView *aView = [self pickerWithBlock:block];
+    [aView show];
+    return aView;
+}
+
++ (DMDatePickerView *)showWithDate:(NSDate *)date block:(void (^)(NSDate * _Nonnull))block
+{
+    DMDatePickerView *aView = [self pickerWithDate:date block:block];
+    [aView show];
+    return aView;
+}
+
++ (DMDatePickerView *)showWithDate:(NSDate *)date
+                         sureTitle:(NSString *)sureTitle
+                       cancelTitle:(NSString *)cancelTitle
+                         sureColor:(UIColor *)sureColor
+                       cancelColor:(UIColor *)cancelColor
+                        timeFormat:(NSString *)timeFormat
+                             block:(void (^)(NSDate *))block
+{
+    DMDatePickerView *aView = [self pickerWithDate:date
+                                         sureTitle:sureTitle
+                                       cancelTitle:cancelTitle
+                                         sureColor:sureColor
+                                       cancelColor:cancelColor
+                                        timeFormat:timeFormat
+                                             block:block];
+    [aView show];
+    return aView;
+}
+
++ (DMDatePickerView *)pickerWithBlock:(void (^)(NSDate *))block
+{
+    return [[self alloc] initWithBlock:block];
+}
+
++ (DMDatePickerView *)pickerWithDate:(NSDate *)date block:(void (^)(NSDate *))block
+{
+    return [[self alloc] initWithDate:date block:block];
+}
+
++ (DMDatePickerView *)pickerWithDate:(NSDate *)date
+                           sureTitle:(NSString *)sureTitle
+                         cancelTitle:(NSString *)cancelTitle
+                           sureColor:(UIColor *)sureColor
+                         cancelColor:(UIColor *)cancelColor
+                          timeFormat:(NSString *)timeFormat
+                               block:(void (^)(NSDate *))block
+{
+    return [[self alloc] initWithDate:date
+                            sureTitle:sureTitle
+                          cancelTitle:cancelTitle
+                            sureColor:sureColor
+                          cancelColor:cancelColor
+                           timeFormat:timeFormat
+                                block:block];
+}
+
+
+- (instancetype)initWithBlock:(void (^)(NSDate *))block
+{
+    return [self initWithDate:nil block:block];
+}
+
+- (instancetype)initWithDate:(NSDate *)date
+                       block:(void (^)(NSDate *))block
+{
+    return [self initWithDate:date
+                    sureTitle:nil
+                  cancelTitle:nil
+                    sureColor:nil
+                  cancelColor:nil
+                   timeFormat:nil
+                        block:block];
+}
+
+- (instancetype)initWithDate:(NSDate *)date
+                   sureTitle:(NSString *)sureTitle
+                 cancelTitle:(NSString *)cancelTitle
+                   sureColor:(UIColor *)sureColor
+                 cancelColor:(UIColor *)cancelColor
+                  timeFormat:(NSString *)timeFormat
+                       block:(void (^)(NSDate *))block
+{
+    NSDate *aDate = date ? date : [NSDate date];
+    
+    self.timePicker.date = aDate;
+    _sureTitle = sureTitle;
+    _sureColor = sureColor;
+    _cancelTitle = cancelTitle;
+    _cancelColor = cancelColor;
+    _timeFormat = timeFormat;
+    _sureBlock = block;
+        
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+
+#pragma mark - Setup
+
 - (void)setupViews
 {
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+    self.backgroundColor = kGetColorRGBA(0, 0, 0, 0.3);
     self.alpha = 0;
     
     UIView *operateView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenH, kScreenW, kSAFE_BOTTOM_HEIGHT + 226)];
@@ -39,36 +155,43 @@
     leftVerticalLine.backgroundColor = [UIColor lightGrayColor];
     leftVerticalLine.alpha = 0.5;
     [operateView addSubview:leftVerticalLine];
-    
-    UIButton *cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, operateView.frame.size.width / 4, 45)];
-    [cancelBtn setTitle:@"Cancel" forState:UIControlStateNormal];
-    [cancelBtn setTitleColor:[UIColor colorWithRed:0 green:122.0/255.0 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
-    [operateView addSubview:cancelBtn];
-    [cancelBtn addTarget:self action:@selector(cancelAction) forControlEvents:UIControlEventTouchUpInside];
-    
+
     //垂直分割线
     UILabel *rightVerticalLine = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4 * 3, 0, 0.5, 45)];
     rightVerticalLine.backgroundColor = [UIColor lightGrayColor];
     rightVerticalLine.alpha = 0.5;
     [operateView addSubview:rightVerticalLine];
-    
-    UIButton *confirmBtn = [[UIButton alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4 * 3, 0, operateView.frame.size.width / 4, 45)];
-    [confirmBtn setTitle:@"Confirm" forState:UIControlStateNormal];
-    [confirmBtn setTitleColor:[UIColor colorWithRed:0 green:122.0/255.0 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
-    [operateView addSubview:confirmBtn];
-    [confirmBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
-    
+
     //水平分割线
     UILabel *horizontalLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, operateView.frame.size.width, 0.5)];
     horizontalLine.backgroundColor = [UIColor lightGrayColor];
     horizontalLine.alpha = 0.5;
     [operateView addSubview:horizontalLine];
     
-    UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, operateView.frame.size.width / 4 * 2, 45)];
-    timeLabel.text = [[NSDate date] stringWithFormat:yyyyMMddHHmm];
-    timeLabel.textAlignment = NSTextAlignmentCenter;
-    [operateView addSubview:timeLabel];
-    self.timeLabel = timeLabel;
+    // cancel btn
+    _cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, operateView.frame.size.width / 4, 45)];
+    [operateView addSubview:_cancelBtn];
+    [_cancelBtn setTitle:self.cancelTitle forState:UIControlStateNormal];
+    [_cancelBtn setTitleColor:self.cancelColor forState:UIControlStateNormal];
+    _cancelBtn.titleLabel.font = kFont(17);
+    [_cancelBtn addTarget:self action:@selector(cancelAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    // sureBtn
+    _sureBtn = [[UIButton alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4 * 3, 0, operateView.frame.size.width / 4, 45)];
+    [operateView addSubview:_sureBtn];
+    [_sureBtn setTitle:self.sureTitle forState:UIControlStateNormal];
+    [_sureBtn setTitleColor:self.sureColor forState:UIControlStateNormal];
+    _sureBtn.titleLabel.font = kFont(17);
+    [_sureBtn addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
+    
+
+    _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(operateView.frame.size.width / 4, 0, operateView.frame.size.width / 4 * 2, 45)];
+    [operateView addSubview:_timeLabel];
+    
+    _timeLabel.textAlignment = NSTextAlignmentCenter;
+    _timeLabel.textColor = [UIColor grayColor];
+    _timeLabel.font = kFont(17);
+    
     
     [operateView addSubview:self.timePicker];
     
@@ -85,12 +208,53 @@
     return _timePicker;
 }
 
+- (NSString *)sureTitle
+{
+    if (_sureTitle == nil) {
+        _sureTitle = @"Confirm";
+    }
+    return _sureTitle;
+}
+
+- (NSString *)cancelTitle
+{
+    if (_cancelTitle == nil) {
+        _cancelTitle = @"Cancel";
+    }
+    return _cancelTitle;
+}
+
+- (UIColor *)sureColor
+{
+    if (_sureColor == nil) {
+        _sureColor = kGetColorRGB(0, 122, 255);
+    }
+    return _sureColor;
+}
+
+- (UIColor *)cancelColor
+{
+    if (_cancelColor == nil) {
+        _cancelColor = kGetColorRGB(0, 122, 255);
+    }
+    return _cancelColor;
+}
+
+- (NSString *)timeFormat
+{
+    if (_timeFormat == nil) {
+        _timeFormat = yyyyMMddHHmm;
+    }
+    return _timeFormat;
+}
+
 #pragma mark - Actions
 
 - (void)show
 {
+    self.hidden = NO;
     [[UIApplication sharedApplication].keyWindow addSubview:self];
-    _timeLabel.text = [_timePicker.date stringWithFormat:yyyyMMddHHmm];
+    _timeLabel.text = [_timePicker.date stringWithFormat:self.timeFormat];
     
     [UIView animateWithDuration:0.25f animations:^{
         self.alpha = 1;
@@ -100,19 +264,38 @@
     }];
 }
 
+/**
+ 当时间选择器正在滚动的时候进行了 hide,
+ 1. 如果 这时候调用了 removeFromSuperview
+    则会造成 UIControlEventValueChanged 不会触发,
+    这时再次show: picker.date 与 picker界面上展示的时间会不同步
+ 2. 如果 hide 中不调用 removeFromSuperview
+    则会造成内存泄漏, self 永远不会释放
+ 
+ 于是有了下面的写法
+ */
 - (void)hide
 {
     [UIView animateWithDuration:0.25f animations:^{
         self.alpha = 0.0f;
         self.operateView.y = kScreenH;
     } completion:^(BOOL finished) {
-        [self removeFromSuperview];
+        self.hidden = YES;
     }];
+    
+    [self performSelector:@selector(remove) withObject:nil afterDelay:10];
+}
+
+- (void)remove
+{
+    if (self.hidden) {
+        [self removeFromSuperview];
+    }
 }
 
 - (void)datePickerChange:(UIDatePicker *)sender
 {
-    _timeLabel.text = [sender.date stringWithFormat:yyyyMMddHHmm];
+    _timeLabel.text = [sender.date stringWithFormat:self.timeFormat];
 }
 
 - (void)cancelAction
@@ -128,30 +311,10 @@
     [self hide];
 }
 
-- (instancetype)initWithDate:(NSDate *)date block:(void (^)(NSDate *date))block
+- (void)dealloc
 {
-    if (self = [super init]) {
-        NSDate *aDate = date ? date : [NSDate date];
-        
-        self.timePicker.date = aDate;
-        self.timeLabel.text = [aDate stringWithFormat:yyyyMMddHHmm];
-        
-        self.sureBlock = block;
-    }
-    return self;
+    MyLog(@" Game Over ... ");
 }
 
-+ (DMDatePickerView *)pickerWithDate:(NSDate *)date block:(void (^)(NSDate *date))block
-{
-    DMDatePickerView *aView = [[self alloc] initWithDate:date block:block];
 
-    return aView;
-}
-
-+ (DMDatePickerView *)showWithDate:(NSDate *)date block:(void (^)(NSDate * _Nonnull))block
-{
-    DMDatePickerView *aView = [self pickerWithDate:date block:block];
-    [aView show];
-    return aView;
-}
 @end

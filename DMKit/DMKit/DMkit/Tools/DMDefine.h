@@ -43,20 +43,20 @@
 #define kGetW(v)            (v).frame.size.width
 #define kGetH(v)            (v).frame.size.height
 
-#define kGetMinX(v)            CGRectGetMinX((v).frame) // 获得控件屏幕的x坐标
-#define kGetMinY(v)            CGRectGetMinY((v).frame) // 获得控件屏幕的Y坐标
+#define kGetMinX(v)         CGRectGetMinX((v).frame) // 获得控件屏幕的x坐标
+#define kGetMinY(v)         CGRectGetMinY((v).frame) // 获得控件屏幕的Y坐标
 
-#define kGetMidX(v)            CGRectGetMidX((v).frame) //横坐标加上到控件中点坐标
-#define kGetMidY(v)            CGRectGetMidY((v).frame) //纵坐标加上到控件中点坐标
+#define kGetMidX(v)         CGRectGetMidX((v).frame) //横坐标加上到控件中点坐标
+#define kGetMidY(v)         CGRectGetMidY((v).frame) //纵坐标加上到控件中点坐标
 
-#define kGetMaxX(v)            CGRectGetMaxX((v).frame) //横坐标加上控件的宽度
-#define kGetMaxY(v)            CGRectGetMaxY((v).frame) //纵坐标加上控件的高度
+#define kGetMaxX(v)         CGRectGetMaxX((v).frame) //横坐标加上控件的宽度
+#define kGetMaxY(v)         CGRectGetMaxY((v).frame) //纵坐标加上控件的高度
 
 #define kGetTextSize(text, font) [text length] ? [text sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero     //获取字体size
 
 
-#define kFont(font)            [UIFont systemFontOfSize:font]
-
+#define kFont(font)             [UIFont systemFontOfSize:font]
+#define kBFont(font)            [UIFont boldSystemFontOfSize:font]
 
 
 

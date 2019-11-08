@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-/** 弹出 全屏背景 内容不全屏 View
+/** 弹出 全屏背景&内容不全屏 的 View
  *
  * contentView : 把要显示的View 添加到这个view上
  * changeContentSize : 修改contentView的size

@@ -23,18 +23,18 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-- (UILabel *)titleLab
+- (UILabel *)vcTitleLab
 {
-    if (_titleLab == nil) {
-        _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenW*0.6, 30)];
-        _titleLab.textAlignment = NSTextAlignmentCenter;
-        _titleLab.text = @"";
-        _titleLab.textColor = [UIColor blackColor];
-        _titleLab.font = [UIFont boldSystemFontOfSize:21];
+    if (_vcTitleLab == nil) {
+        _vcTitleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenW*0.6, 30)];
+        _vcTitleLab.textAlignment = NSTextAlignmentCenter;
+        _vcTitleLab.text = @"";
+        _vcTitleLab.textColor = [UIColor blackColor];
+        _vcTitleLab.font = [UIFont boldSystemFontOfSize:21];
         
-        self.navigationItem.titleView = _titleLab;
+        self.navigationItem.titleView = _vcTitleLab;
     }
-    return _titleLab;
+    return _vcTitleLab;
 }
 
 #pragma mark - MBHud

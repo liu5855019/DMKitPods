@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A4ADB692374003900DB5643 /* DemoRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB682374003900DB5643 /* DemoRootVC.m */; };
+		0A4ADB6D2374017600DB5643 /* DMSegmentViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB6C2374017600DB5643 /* DMSegmentViewVC.m */; };
+		0A4ADB7023740A9B00DB5643 /* DMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB6F23740A9B00DB5643 /* DMPickerView.m */; };
+		0A4ADB7423740DA700DB5643 /* DMPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB7323740DA700DB5643 /* DMPickerVC.m */; };
+		0A4ADB782374105E00DB5643 /* DMDatePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB772374105E00DB5643 /* DMDatePickerVC.m */; };
 		0A9A6DF423162203006F2667 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6DF323162203006F2667 /* AppDelegate.m */; };
 		0A9A6DF723162203006F2667 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6DF623162203006F2667 /* ViewController.m */; };
 		0A9A6DFA23162203006F2667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A6DF823162203006F2667 /* Main.storyboard */; };
@@ -34,12 +39,10 @@
 		0A9A6E4E231635CA006F2667 /* CADisplayLink+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */; };
 		0A9A6EA123167603006F2667 /* DMDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E8E23167602006F2667 /* DMDatePickerView.m */; };
 		0A9A6EA223167603006F2667 /* DMShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E8F23167602006F2667 /* DMShadowView.m */; };
-		0A9A6EA323167603006F2667 /* DMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9223167602006F2667 /* DMPickerView.m */; };
 		0A9A6EA423167603006F2667 /* DMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9423167602006F2667 /* DMSegmentView.m */; };
 		0A9A6EA623167603006F2667 /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9923167603006F2667 /* DMWebView.m */; };
 		0A9A6EA723167603006F2667 /* DMItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9B23167603006F2667 /* DMItemsView.m */; };
 		0A9A6EA823167603006F2667 /* DMShowBigImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */; };
-		0A9A6EA923167603006F2667 /* DMBasePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9E23167603006F2667 /* DMBasePickerView.m */; };
 		0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9F23167603006F2667 /* DMWKWebView.m */; };
 		0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6EAC231685A0006F2667 /* DMScreen.m */; };
 		0AFDEC172322511800047E03 /* DMBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDEC162322511800047E03 /* DMBaseAlertView.m */; };
@@ -48,6 +51,16 @@
 
 /* Begin PBXFileReference section */
 		07D29B10BBC474E648050754 /* Pods-DMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMKit.debug.xcconfig"; path = "Target Support Files/Pods-DMKit/Pods-DMKit.debug.xcconfig"; sourceTree = "<group>"; };
+		0A4ADB672374003900DB5643 /* DemoRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoRootVC.h; sourceTree = "<group>"; };
+		0A4ADB682374003900DB5643 /* DemoRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoRootVC.m; sourceTree = "<group>"; };
+		0A4ADB6B2374017600DB5643 /* DMSegmentViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSegmentViewVC.h; sourceTree = "<group>"; };
+		0A4ADB6C2374017600DB5643 /* DMSegmentViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSegmentViewVC.m; sourceTree = "<group>"; };
+		0A4ADB6E23740A9B00DB5643 /* DMPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMPickerView.h; sourceTree = "<group>"; };
+		0A4ADB6F23740A9B00DB5643 /* DMPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPickerView.m; sourceTree = "<group>"; };
+		0A4ADB7223740DA700DB5643 /* DMPickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMPickerVC.h; sourceTree = "<group>"; };
+		0A4ADB7323740DA700DB5643 /* DMPickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMPickerVC.m; sourceTree = "<group>"; };
+		0A4ADB762374105E00DB5643 /* DMDatePickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMDatePickerVC.h; sourceTree = "<group>"; };
+		0A4ADB772374105E00DB5643 /* DMDatePickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMDatePickerVC.m; sourceTree = "<group>"; };
 		0A9A6DEF23162203006F2667 /* DMKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9A6DF223162203006F2667 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A9A6DF323162203006F2667 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,9 +116,7 @@
 		0A9A6E8F23167602006F2667 /* DMShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMShadowView.m; sourceTree = "<group>"; };
 		0A9A6E9023167602006F2667 /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
 		0A9A6E9123167602006F2667 /* DMShowBigImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShowBigImageView.h; sourceTree = "<group>"; };
-		0A9A6E9223167602006F2667 /* DMPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPickerView.m; sourceTree = "<group>"; };
 		0A9A6E9423167602006F2667 /* DMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSegmentView.m; sourceTree = "<group>"; };
-		0A9A6E9523167602006F2667 /* DMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPickerView.h; sourceTree = "<group>"; };
 		0A9A6E9723167603006F2667 /* DMShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShadowView.h; sourceTree = "<group>"; };
 		0A9A6E9823167603006F2667 /* DMSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSegmentView.h; sourceTree = "<group>"; };
 		0A9A6E9923167603006F2667 /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
@@ -113,9 +124,7 @@
 		0A9A6E9B23167603006F2667 /* DMItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMItemsView.m; sourceTree = "<group>"; };
 		0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMShowBigImageView.m; sourceTree = "<group>"; };
 		0A9A6E9D23167603006F2667 /* DMDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDatePickerView.h; sourceTree = "<group>"; };
-		0A9A6E9E23167603006F2667 /* DMBasePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBasePickerView.m; sourceTree = "<group>"; };
 		0A9A6E9F23167603006F2667 /* DMWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWKWebView.m; sourceTree = "<group>"; };
-		0A9A6EA023167603006F2667 /* DMBasePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBasePickerView.h; sourceTree = "<group>"; };
 		0A9A6EAB231685A0006F2667 /* DMScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMScreen.h; sourceTree = "<group>"; };
 		0A9A6EAC231685A0006F2667 /* DMScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMScreen.m; sourceTree = "<group>"; };
 		0AFDEC152322511800047E03 /* DMBaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseAlertView.h; sourceTree = "<group>"; };
@@ -145,6 +154,45 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0A4ADB662373FFC300DB5643 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0A4ADB6A2374014C00DB5643 /* DMSegmentViewVC */,
+				0A4ADB7123740D7700DB5643 /* DMPickerVC */,
+				0A4ADB752374102800DB5643 /* DMDatePickerVC */,
+				0A4ADB672374003900DB5643 /* DemoRootVC.h */,
+				0A4ADB682374003900DB5643 /* DemoRootVC.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		0A4ADB6A2374014C00DB5643 /* DMSegmentViewVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A4ADB6B2374017600DB5643 /* DMSegmentViewVC.h */,
+				0A4ADB6C2374017600DB5643 /* DMSegmentViewVC.m */,
+			);
+			path = DMSegmentViewVC;
+			sourceTree = "<group>";
+		};
+		0A4ADB7123740D7700DB5643 /* DMPickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A4ADB7223740DA700DB5643 /* DMPickerVC.h */,
+				0A4ADB7323740DA700DB5643 /* DMPickerVC.m */,
+			);
+			path = DMPickerVC;
+			sourceTree = "<group>";
+		};
+		0A4ADB752374102800DB5643 /* DMDatePickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A4ADB762374105E00DB5643 /* DMDatePickerVC.h */,
+				0A4ADB772374105E00DB5643 /* DMDatePickerVC.m */,
+			);
+			path = DMDatePickerVC;
+			sourceTree = "<group>";
+		};
 		0A9A6DE623162203006F2667 = {
 			isa = PBXGroup;
 			children = (
@@ -166,8 +214,9 @@
 		0A9A6DF123162203006F2667 /* DMKit */ = {
 			isa = PBXGroup;
 			children = (
-				0AD6734E2338C50E00186822 /* Project */,
+				0A4ADB662373FFC300DB5643 /* Demo */,
 				0A9A6E082316221B006F2667 /* DMkit */,
+				0AD6734E2338C50E00186822 /* Project */,
 			);
 			path = DMKit;
 			sourceTree = "<group>";
@@ -201,10 +250,8 @@
 			children = (
 				0AFDEC152322511800047E03 /* DMBaseAlertView.h */,
 				0AFDEC162322511800047E03 /* DMBaseAlertView.m */,
-				0A9A6EA023167603006F2667 /* DMBasePickerView.h */,
-				0A9A6E9E23167603006F2667 /* DMBasePickerView.m */,
-				0A9A6E9523167602006F2667 /* DMPickerView.h */,
-				0A9A6E9223167602006F2667 /* DMPickerView.m */,
+				0A4ADB6E23740A9B00DB5643 /* DMPickerView.h */,
+				0A4ADB6F23740A9B00DB5643 /* DMPickerView.m */,
 				0A9A6E9D23167603006F2667 /* DMDatePickerView.h */,
 				0A9A6E8E23167602006F2667 /* DMDatePickerView.m */,
 				0A9A6E9A23167603006F2667 /* DMItemsView.h */,
@@ -432,14 +479,14 @@
 				0A9A6E47231635CA006F2667 /* NSDate+DMTools.m in Sources */,
 				0A9A6E4E231635CA006F2667 /* CADisplayLink+DMTools.m in Sources */,
 				0A9A6E2F231622A4006F2667 /* NSArray+DMTools.m in Sources */,
-				0A9A6EA323167603006F2667 /* DMPickerView.m in Sources */,
 				0A9A6E49231635CA006F2667 /* NSObject+DMTools.m in Sources */,
 				0A9A6E0223162207006F2667 /* main.m in Sources */,
+				0A4ADB7023740A9B00DB5643 /* DMPickerView.m in Sources */,
 				0A9A6E33231622A4006F2667 /* DMTools.m in Sources */,
 				0A9A6EA123167603006F2667 /* DMDatePickerView.m in Sources */,
-				0A9A6EA923167603006F2667 /* DMBasePickerView.m in Sources */,
 				0A9A6E2B231622A4006F2667 /* DMCopyUserInfo.m in Sources */,
 				0A9A6DF423162203006F2667 /* AppDelegate.m in Sources */,
+				0A4ADB7423740DA700DB5643 /* DMPickerVC.m in Sources */,
 				0A9A6E2C231622A4006F2667 /* DMBaseViewController.m in Sources */,
 				0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */,
 				0A9A6E31231622A4006F2667 /* LocationTool.m in Sources */,
@@ -448,8 +495,11 @@
 				0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */,
 				0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */,
 				0A9A6E2A231622A4006F2667 /* DMCopyNet.m in Sources */,
+				0A4ADB6D2374017600DB5643 /* DMSegmentViewVC.m in Sources */,
 				0A9A6E28231622A4006F2667 /* DMBaseNavigationController.m in Sources */,
 				0A9A6EA223167603006F2667 /* DMShadowView.m in Sources */,
+				0A4ADB692374003900DB5643 /* DemoRootVC.m in Sources */,
+				0A4ADB782374105E00DB5643 /* DMDatePickerVC.m in Sources */,
 				0A9A6E4D231635CA006F2667 /* NSString+DMTools.m in Sources */,
 				0A9A6EA423167603006F2667 /* DMSegmentView.m in Sources */,
 			);

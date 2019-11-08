@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "DMKit.h"
+#import <Toast/Toast.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,8 @@
     // Override point for customization after application launch.
     
     NSLog(@"start");
+    
+    [CSToastManager setDefaultPosition:CSToastPositionCenter];
     
     return YES;
 }

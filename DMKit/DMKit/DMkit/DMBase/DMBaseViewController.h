@@ -11,7 +11,7 @@
 
 @interface DMBaseViewController : UIViewController
 
-@property (nonatomic , strong) UILabel *titleLab;
+@property (nonatomic , strong) UILabel *vcTitleLab;
 
 @property (nonatomic , strong) MBProgressHUD * mbHud;
 - (void)showHUD;

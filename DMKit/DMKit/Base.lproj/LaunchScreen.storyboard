@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DMKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toD-FC-WuJ">
-                                <rect key="frame" x="137" y="424" width="140" height="58.5"/>
+                                <rect key="frame" x="137" y="384" width="140" height="58.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,7 +26,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="toD-FC-WuJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qji-yt-Xz8"/>
-                            <constraint firstItem="toD-FC-WuJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iJ3-7u-tNS"/>
+                            <constraint firstItem="toD-FC-WuJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-40" id="iJ3-7u-tNS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

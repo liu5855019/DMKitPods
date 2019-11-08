@@ -23,6 +23,26 @@
     return [self objectAtIndex:index];
 }
 
+- (BOOL)dm_hasString:(NSString *)string
+{
+    for (NSString *string1 in self) {
+        if ([string isEqualToString:string1]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (BOOL)dm_hasObject:(NSObject *)object
+{
+    for (NSObject *obj in self) {
+        if (obj == object) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 
 - (NSMutableArray *)classifyWithKey:(NSString *)key block:(void (^)(NSMutableArray *keys , NSMutableArray *valueArrays))block
 {
@@ -32,7 +52,7 @@
         NSString *classifyKey = [object valueForKey:key];
         if (classifyKey &&
             [classifyKey isKindOfClass:[NSString class]] &&
-            ![muKeys hasString:classifyKey]) {
+            ![muKeys dm_hasString:classifyKey]) {
             [muKeys addObject:classifyKey];
         }
     }
@@ -57,24 +77,5 @@
     return result;
 }
 
-- (BOOL)hasString:(NSString *)string
-{
-    for (NSString *string1 in self) {
-        if ([string isEqualToString:string1]) {
-            return YES;
-        }
-    }
-    return NO;
-}
-
-- (BOOL)hasObject:(NSObject *)object
-{
-    for (NSObject *obj in self) {
-        if (obj == object) {
-            return YES;
-        }
-    }
-    return NO;
-}
 
 @end

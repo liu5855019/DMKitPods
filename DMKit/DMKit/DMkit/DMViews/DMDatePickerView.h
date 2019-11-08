@@ -10,20 +10,63 @@
 
 @interface DMDatePickerView : UIView
 
-@property (nonatomic, strong) UIView *operateView;
-@property (nonatomic, strong) UILabel *timeLabel;
-@property (nonatomic, strong) UIDatePicker *timePicker;
+@property (nonatomic , strong ) UIDatePicker *timePicker;
+
+@property (nonatomic , strong , readonly) UIView *operateView;
+@property (nonatomic , strong , readonly) UILabel *timeLabel;
+@property (nonatomic , strong , readonly) UIButton *sureBtn;
+@property (nonatomic , strong , readonly) UIButton *cancelBtn;
+@property (nonatomic , copy) NSString *timeFormat;      ///< 用来显示所选的time的格式 默认:"yyyy/MM/dd HH:mm"
 
 @property (nonatomic , copy) void (^sureBlock)(NSDate *date);
 
 - (void)show;
-
 - (void)hide;
 
-- (instancetype)initWithDate:(NSDate *)date block:(void (^)(NSDate *date))block;
+#pragma mark - Init
 
-+ (DMDatePickerView *)pickerWithDate:(NSDate *)date block:(void (^)(NSDate *date))block;
+- (instancetype)initWithBlock:(void (^)(NSDate *date))block;
 
-+ (DMDatePickerView *)showWithDate:(NSDate *)date block:(void (^)(NSDate *date))block;
+- (instancetype)initWithDate:(NSDate *)date
+                       block:(void (^)(NSDate *date))block;
+
+- (instancetype)initWithDate:(NSDate *)date
+                   sureTitle:(NSString *)sureTitle
+                 cancelTitle:(NSString *)cancelTitle
+                   sureColor:(UIColor *)sureColor
+                 cancelColor:(UIColor *)cancelColor
+                  timeFormat:(NSString *)timeFormat
+                       block:(void (^)(NSDate *date))block;
+
+
+
++ (DMDatePickerView *)pickerWithBlock:(void (^)(NSDate * date))block;
+
++ (DMDatePickerView *)pickerWithDate:(NSDate *)date
+                               block:(void (^)(NSDate * date))block;
+
++ (DMDatePickerView *)pickerWithDate:(NSDate *)date
+                           sureTitle:(NSString *)sureTitle
+                         cancelTitle:(NSString *)cancelTitle
+                           sureColor:(UIColor *)sureColor
+                         cancelColor:(UIColor *)cancelColor
+                          timeFormat:(NSString *)timeFormat
+                               block:(void (^)(NSDate *date))block;
+
+
++ (DMDatePickerView *)showWithBlock:(void (^)(NSDate * date))block;
+
++ (DMDatePickerView *)showWithDate:(NSDate *)date
+                             block:(void (^)(NSDate * date))block;
+
++ (DMDatePickerView *)showWithDate:(NSDate *)date
+                         sureTitle:(NSString *)sureTitle
+                       cancelTitle:(NSString *)cancelTitle
+                         sureColor:(UIColor *)sureColor
+                       cancelColor:(UIColor *)cancelColor
+                        timeFormat:(NSString *)timeFormat
+                             block:(void (^)(NSDate *date))block;
+
+
 
 @end
