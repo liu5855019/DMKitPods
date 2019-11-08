@@ -40,7 +40,8 @@
 
 
 #pragma mark - TableView
-- (UITableView *)tabV{
+- (UITableView *)tabV
+{
     if (_tabV == nil) {
         _tabV = [[UITableView alloc] initWithFrame:CGRectMake(0, kNAV_HEIGHT, kScreenW, kScreenH - kNAV_HEIGHT - kSAFE_BOTTOM_HEIGHT) style:UITableViewStylePlain];
         
@@ -141,9 +142,4 @@
 }
 
 @end
-
-
-
-
-
 
