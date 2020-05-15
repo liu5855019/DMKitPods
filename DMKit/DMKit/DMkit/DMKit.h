@@ -82,6 +82,5 @@ extern NSString *DMKitVersion;
 #import "DMBaseAlertView.h"
 #import "DMPickerView.h"
 #import "DMDatePickerView.h"
-#import "DMSegmentView.h"
 #import "DMShowBigImageView.h"
 
