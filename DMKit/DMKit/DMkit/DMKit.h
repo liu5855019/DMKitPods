@@ -22,7 +22,7 @@ extern NSString *DMKitVersion;
 
 
 
-// Version : 2.0.0  //由于本次改动较大, 版本号直接上2
+// Version : 2.0.1  //由于本次改动较大, 版本号直接上2
 /**
  去掉 AFNetWorking 的引用
  去掉 Toast 的引用
