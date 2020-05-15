@@ -16,7 +16,7 @@
 #import <sys/utsname.h>
 #import <CommonCrypto/CommonDigest.h>   //md5 用到
 
-NSString *DMKitVersion = @"2.0.0";
+NSString *DMKitVersion = @"2.0.1";
 
 @implementation DMTools
 
