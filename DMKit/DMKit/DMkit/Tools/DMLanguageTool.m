@@ -19,7 +19,7 @@
 
 @implementation DMLanguageTool
 
-+ (id)sharedInstance
++ (instancetype)sharedInstance
 {
     static DMLanguageTool *sharedModel;
     if (!sharedModel) {
@@ -65,7 +65,6 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kUpdateLanguageNoti object:nil userInfo:nil];
-    
 }
 
 - (NSBundle *)bundleWithType:(LanguageType)type
@@ -78,6 +77,41 @@
         return [NSBundle bundleWithPath:path];
     }
     return nil;
+}
+
+- (NSString *)typeStr
+{
+    return [DMLanguageTool stringWithType:_type];
+}
+
++ (NSString *)stringWithType:(LanguageType)type
+{
+    if (type == LT_DEFAULT) {
+        return @"默认(跟随系统)";
+    } else if (type == LT_ZH_HANS) {
+        return @"简体中文";
+    } else if (type == LT_EN) {
+        return @"English";
+    }
+    return nil;
+}
+
++ (BOOL)isEenglish
+{
+    if ([DMLanguageTool sharedInstance].type == LT_EN) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
++ (NSLocale *)locale
+{
+    if ([DMLanguageTool sharedInstance].type == LT_EN) {
+        return [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    } else {
+        return [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+    }
 }
 
 @end

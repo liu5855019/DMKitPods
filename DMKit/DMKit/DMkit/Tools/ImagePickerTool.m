@@ -31,13 +31,13 @@
 }
 
 
--(UIImagePickerController *)imagePicker
+- (UIImagePickerController *)imagePicker
 {
     if (_imagePicker == nil) {
         if (_isCamera) {//相机
             if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-                
-                [DMTools showAlertWithTitle:nil andContent:kLocStr(@"没有可以使用的相机!") andBlock:nil atVC:_vc];
+                                
+                [DMTools showAlertWithTitle:nil content:@"没有可以使用的相机!" atVC:_vc sureTitle:nil sureBlock:nil];
                 
                 return nil;
             }
@@ -51,10 +51,10 @@
             _imagePicker.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto;
             _imagePicker.showsCameraControls = YES;
             _imagePicker.allowsEditing = _isEditing;
-        }else{//相册
+        } else {//相册
             if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypePhotoLibrary]) {
                 
-                [DMTools showAlertWithTitle:nil andContent:kLocStr(@"没有可以使用的相册!") andBlock:nil atVC:_vc];
+                [DMTools showAlertWithTitle:nil content:@"没有可以使用的相册!" atVC:_vc sureTitle:nil sureBlock:nil];
                 
                 return nil;
             }
@@ -63,7 +63,6 @@
             _imagePicker.sourceType = sourcheType;
             _imagePicker.delegate = self;
             _imagePicker.allowsEditing = _isEditing;
-            
         }
     }
     return _imagePicker;
@@ -82,12 +81,19 @@
         {
             //无权限
             NSLog(@"照相服务没有打开");
-            [DMTools showAlertWithTitle:nil andContent:@"照相机服务没有打开,是否前往打开?" andSureBlock:^{
+            
+            [DMTools showAlertWithTitle:nil
+                                content:@"照相机服务没有打开,是否前往打开?"
+                                   atVC:_vc
+                              sureTitle:@"是"
+                            cancelTitle:@"否"
+                              sureBlock:^{
                 NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
                 if ([[UIApplication sharedApplication] canOpenURL:url]) {
                     [[UIApplication sharedApplication] openURL:url];
                 }
-            } andCancelBlock:nil andSureTitle:@"是" andCancelTitle:@"否" atVC:_vc];
+            } cancelBlock:nil];
+            
         } else {
             NSAssert(_vc, @"UIViewController for present cannot be nil");
             [_vc presentViewController:self.imagePicker animated:YES completion:nil];
@@ -97,12 +103,18 @@
         if (status == PHAuthorizationStatusRestricted ||
             status == PHAuthorizationStatusDenied) {
             //无权限
-            [DMTools showAlertWithTitle:nil andContent:@"相册权限没有打开,是否前往打开?" andSureBlock:^{
+            [DMTools showAlertWithTitle:nil
+                                content:@"相册权限没有打开,是否前往打开?"
+                                   atVC:_vc
+                              sureTitle:@"是"
+                            cancelTitle:@"否"
+                              sureBlock:^{
                 NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
                 if ([[UIApplication sharedApplication] canOpenURL:url]) {
                     [[UIApplication sharedApplication] openURL:url];
                 }
-            } andCancelBlock:nil andSureTitle:@"是" andCancelTitle:@"否" atVC:_vc];
+            } cancelBlock:nil];
+            
         } else {
             NSAssert(_vc, @"UIViewController for present cannot be nil");
             [_vc presentViewController:self.imagePicker animated:YES completion:nil];

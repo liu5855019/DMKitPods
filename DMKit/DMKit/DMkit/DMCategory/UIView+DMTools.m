@@ -7,6 +7,7 @@
 //
 
 #import "UIView+DMTools.h"
+#import "DMDefine.h"
 
 @implementation UIView (DMTools)
 
@@ -125,5 +126,25 @@
 }
 
 
+/** 增加带圆角指定颜色阴影 */
+- (void)addCornerShadowWith:(UIColor *)color
+{
+    [self addCornerShadowWith:color hasBorder:NO];
+}
+
+- (void)addCornerShadowWith:(UIColor *)color hasBorder:(BOOL)hasBorder
+{
+    if (hasBorder) {
+        self.layer.borderColor = color.CGColor;
+        self.layer.borderWidth = kLineH;
+    }
+    
+    self.backgroundColor = [UIColor whiteColor];
+    self.layer.shadowColor = color.CGColor;
+    self.layer.shadowRadius = 5;
+    self.layer.shadowOpacity = 0.3;
+    self.layer.shadowOffset = CGSizeMake(0, 0);
+    self.layer.cornerRadius = 6;
+}
 
 @end

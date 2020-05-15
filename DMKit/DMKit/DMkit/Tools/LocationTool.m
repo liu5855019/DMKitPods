@@ -74,15 +74,25 @@
 {
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) { //定位服务没有打开
         NSLog(@"定位服务没有打开");
-        [DMTools showAlertWithTitle:kLocStr(@"提示") andContent:kLocStr(@"定位服务没有打开,是否前往打开?") andSureBlock:^{
+        [DMTools showAlertWithTitle:@"提示"
+                            content:@"定位服务没有打开,是否前往打开?"
+                               atVC:nil
+                          sureTitle:@"是"
+                        cancelTitle:@"否"
+                          sureBlock:^{
             NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
             if ([[UIApplication sharedApplication] canOpenURL:url]) {
                 [[UIApplication sharedApplication] openURL:url];
             }
-        } andCancelBlock:nil andSureTitle:kLocStr(@"是") andCancelTitle:kLocStr(@"否") atVC:nil];
-    }else{
-        if(error){
-            [DMTools showAlertWithTitle:kLocStr(@"提示") andContent:kLocStr(@"定位失败") andBlock:nil atVC:nil];
+        } cancelBlock:nil];
+        
+    } else {
+        if (error) {
+            [DMTools showAlertWithTitle:@"提示"
+                                content:@"定位失败"
+                                   atVC:nil
+                              sureTitle:nil
+                              sureBlock:nil];
         }
     }
     [manager stopUpdatingLocation];

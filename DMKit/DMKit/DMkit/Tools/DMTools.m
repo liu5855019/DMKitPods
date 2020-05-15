@@ -12,12 +12,11 @@
 #import "NSArray+DMTools.h"
 #import "NSString+DMTools.h"
 
-#import <Toast/Toast.h>
-
 #include <objc/runtime.h>
 #import <sys/utsname.h>
 #import <CommonCrypto/CommonDigest.h>   //md5 用到
 
+NSString *DMKitVersion = @"2.0.0";
 
 @implementation DMTools
 
@@ -192,12 +191,112 @@
     }));
 }
 
-#pragma mark - <<Alert & Sheet & Toast>>
-/** 弹出对话框,只有确定按钮 */
+#pragma mark - << Alert & Sheet >>
+
+/** 弹出对话框 , 只有确定按钮 */
++ (void)showAlertWithTitle:(NSString *)title
+                   content:(NSString *)content
+                      atVC:(__weak UIViewController *)vc
+                 sureTitle:(NSString *)sureTitle
+                 sureBlock:(void (^)(void))sureBlock
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:content preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action =
+        [UIAlertAction actionWithTitle:sureTitle.length ? sureTitle : @"确定"
+                                 style:UIAlertActionStyleCancel
+                               handler:^(UIAlertAction * _Nonnull action) {
+            if (sureBlock) {
+                sureBlock();
+            }
+        }];
+    
+    [controller addAction:action];
+    
+    if (vc == nil) {
+        vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    }
+    [vc presentViewController:controller animated:YES completion:nil];
+}
+
+/** 弹出对话框,带确定和取消按钮,可定制确定取消的标题 */
++ (void)showAlertWithTitle:(NSString *)title
+                   content:(NSString *)content
+                      atVC:(__weak UIViewController *)vc
+                 sureTitle:(NSString *)sureTitle
+               cancelTitle:(NSString *)cancelTitle
+                 sureBlock:(void(^)(void))sureBlock
+               cancelBlock:(void(^)(void))cancelBlock
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:content preferredStyle:UIAlertControllerStyleAlert];
+    
+    sureTitle = sureTitle.length ? sureTitle : @"确定";
+    cancelTitle = cancelTitle.length ? cancelTitle : @"取消";
+    
+    UIAlertAction *sureAction =
+        [UIAlertAction actionWithTitle:sureTitle
+                                 style:[sureTitle isEqualToString:@"删除"] ? UIAlertActionStyleDestructive : UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * _Nonnull action) {
+            if (sureBlock) {
+                sureBlock();
+            }
+        }];
+    
+    UIAlertAction *cancelAction =
+        [UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (cancelBlock) {
+                cancelBlock();
+            }
+        }];
+
+    [controller addAction:cancelAction];
+    [controller addAction:sureAction];
+    
+    if (vc == nil) {
+        vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    }
+    [vc presentViewController:controller animated:YES completion:nil];
+}
+
+/** 弹出sheet,根据数组弹出不同个数的action,外带取消按钮 */
++ (void)showSheetWithTitle:(NSString *)title
+                andContent:(NSString *)content
+           andActionTitles:(NSArray <NSString*> *)titles
+               cancelTitle:(NSString *)cancelTitle
+                      atVC:(__weak UIViewController *)vc
+                     block:(void (^)(int index))block
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:content preferredStyle:UIAlertControllerStyleActionSheet];
+    int i = 0;
+    for (NSString *actionTitle in titles) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+            if (block) {
+                block(i);
+            }
+        }];
+        i++;
+        [alertController addAction:action];
+    }
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:cancelTitle.length ? cancelTitle : @"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:action];
+    
+    if (vc == nil) {
+        vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    }
+    if (IS_IPAD) {
+        UIPopoverPresentationController *popPresenter = [alertController popoverPresentationController];
+        popPresenter.sourceView = vc.view;
+        popPresenter.sourceRect = vc.view.bounds;
+    }
+    [vc presentViewController:alertController animated:YES completion:nil];
+}
+
 + (void)showAlertWithTitle:(NSString *)title
                 andContent:(NSString *)content
                   andBlock:(void (^)(void))todo
-                      atVC:(UIViewController *__weak)vc
+                      atVC:(UIViewController *__weak)vc __attribute__((deprecated("After 1.4.0 Use showAlertWithTitle: content: ...")))
 {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:content preferredStyle:UIAlertControllerStyleAlert];
     
@@ -216,21 +315,20 @@
     [vc presentViewController:controller animated:YES completion:nil];
 }
 
-/** 弹出对话框,带确定和取消按钮,可定制确定取消的标题 */
 + (void)showAlertWithTitle:(NSString *)title
                 andContent:(NSString *)content
               andSureBlock:(void(^)(void))sureTodo
             andCancelBlock:(void(^)(void))cancelTodo
               andSureTitle:(NSString *)sureTitle
             andCancelTitle:(NSString *)cancelTitle
-                      atVC:(UIViewController *__weak)vc
+                      atVC:(UIViewController *__weak)vc __attribute__((deprecated("After 1.4.0 Use showAlertWithTitle: content: ...")))
 {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:content preferredStyle:UIAlertControllerStyleAlert];
-    sureTitle = sureTitle.length ? sureTitle : kLocStr(@"确定");
-    cancelTitle = cancelTitle.length ? cancelTitle : kLocStr(@"取消");
+    sureTitle = sureTitle.length ? sureTitle : @"确定";
+    cancelTitle = cancelTitle.length ? cancelTitle : @"取消";
     UIAlertAction *sureAction = nil;
     
-    if ([sureTitle isEqualToString:kLocStr(@"删除")]) {
+    if ([sureTitle isEqualToString:@"删除"]) {
         sureAction = [UIAlertAction actionWithTitle:sureTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             if (sureTodo) {
                 sureTodo();
@@ -260,68 +358,18 @@
     [vc presentViewController:controller animated:YES completion:nil];
 }
 
-/** 弹出sheet,根据数组弹出不同个数的action,外带取消按钮 */
-+(void)showSheetWithTitle:(NSString *)title
-               andContent:(NSString *)content
-          andActionTitles:(NSArray <NSString*> *)titles
-              cancelTitle:(NSString *)cancelTitle
-                     atVC:(__weak UIViewController *)vc
-                    block:(void (^)(int index))block
-{
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:content preferredStyle:UIAlertControllerStyleActionSheet];
-    int i = 0;
-    for (NSString *actionTitle in titles) {
-        UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
-            if (block) {
-                block(i);
-            }
-        }];
-        i++;
-        [alertController addAction:action];
-    }
-    
-    UIAlertAction *action = [UIAlertAction actionWithTitle:cancelTitle.length ? cancelTitle : kLocStr(@"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action){
-        
-    }];
-    
-    [alertController addAction:action];
-    
-    if (vc == nil) {
-        vc = [UIApplication sharedApplication].keyWindow.rootViewController;
-    }
-    
-    if (IS_IPAD) {
-        UIPopoverPresentationController *popPresenter = [alertController popoverPresentationController];
-        popPresenter.sourceView = vc.view;
-        popPresenter.sourceRect = vc.view.bounds;
-    }
-    [vc presentViewController:alertController animated:YES completion:nil];
-}
-
-/** 在window上显示toast */
-+ (void)showToastAtWindow:(NSString *)content
-{
-    [[UIApplication sharedApplication].keyWindow makeToast:content];
-}
-
-/** 在window上显示toast */
-+ (void)showToastAtWindow:(NSString *)content duration:(NSTimeInterval)time position:(id)obj
-{
-    [[UIApplication sharedApplication].keyWindow makeToast:content duration:time position:obj];
-}
-
 #pragma mark - <<Tools>>
 
 /** 检查一个对象是否为空 */
-+ (BOOL) checkIsNullObject:(id)anObject
++ (BOOL)checkIsNullObject:(id)anObject
 {
-    if (!anObject || [anObject isKindOfClass:[NSNull class]]) return YES;
+    if (anObject == nil || [anObject isKindOfClass:[NSNull class]]) return YES;
     
     return NO;
 }
 
 /** 从一个nsobject中根据属性获得dict */
-+ (NSDictionary *) getDictFromObject:(NSObject *)object
++ (NSDictionary *)getDictFromObject:(NSObject *)object
 {
     unsigned int count;
     
@@ -376,16 +424,16 @@
                                                        options:NSJSONWritingPrettyPrinted
                                                          error:&error];
     
-    if ([jsonData length] > 0 && error == nil){
+    if ([jsonData length] > 0 && error == nil) {
         return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }else{
+    } else {
         NSLog(@"%@",error);
         return nil;
     }
 }
 
 /** jsonStr >>>>>>> dict or array */
-+ (id) getDictOrArrayFromJsonStr:(NSString *)json
++ (id)getDictOrArrayFromJsonStr:(NSString *)json
 {
     if (!json) {
         return nil;
@@ -453,22 +501,22 @@
 #pragma mark - << NSUserDefults >>
 
 /** 存储用户偏好设置 到 NSUserDefults */
-+(void)saveUserData:(id <NSCoding>)data forKey:(NSString*)key
++ (void)saveUserData:(id <NSCoding>)data forKey:(NSString*)key
 {
-    if (data){
+    if (data) {
         [[NSUserDefaults standardUserDefaults]setObject:data forKey:key];
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
 }
 
 /** 读取用户偏好设置 */
-+(id)readUserDataForKey:(NSString*)key
++ (id)readUserDataForKey:(NSString*)key
 {
     return [[NSUserDefaults standardUserDefaults]objectForKey:key];
 }
 
 /** 删除用户偏好设置*/
-+(void)removeUserDataForkey:(NSString*)key
++ (void)removeUserDataForkey:(NSString*)key
 {
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:key];
 }
@@ -476,21 +524,21 @@
 #pragma mark - << Documents >>
 
 /** 给出文件名获得其在doc中的路径 */
-+(NSString *)filePathInDocuntsWithFile:(NSString *)file
++ (NSString *)filePathInDocuntsWithFile:(NSString *)file
 {
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
     return [path stringByAppendingPathComponent:file];
 }
 
 /** 给出文件名获得其在Cache中的路径 */
-+(NSString *)filePathInCachesWithFile:(NSString *)file
++ (NSString *)filePathInCachesWithFile:(NSString *)file
 {
     NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
     return [path stringByAppendingPathComponent:file];
 }
 
 /** 给出文件名获得其在Tmp中的路径 */
-+(NSString *)filePathInTmpWithFile:(NSString *)file
++ (NSString *)filePathInTmpWithFile:(NSString *)file
 {
     NSString *path = NSTemporaryDirectory();
     return [path stringByAppendingPathComponent:file];
@@ -514,7 +562,6 @@
         return NO;
     }
     return YES;
-    
 }
 
 /** 目录是否存在 */
@@ -723,7 +770,7 @@
 }
 
 /** 车牌号验证 */
-+ (BOOL) checkCarNumber:(NSString *) CarNumber
++ (BOOL)checkCarNumber:(NSString *) CarNumber
 {
     NSString *bankNum = @"^[\u4e00-\u9fa5]{1}[a-zA-Z]{1}[a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fa5]$";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];

@@ -33,8 +33,13 @@
     _datas = @[
         @"DMSegmentViewVC",
         @"DMPickerVC",
-        @"DMDatePickerVC"
+        @"DMDatePickerVC",
+        @"DMItemsVC"
     ];
+    
+    NSLog(@"%@",DMKitVersion);
+    
+    
 }
 
 #pragma mark - TableView

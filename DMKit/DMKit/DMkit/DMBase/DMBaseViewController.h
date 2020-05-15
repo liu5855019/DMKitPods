@@ -7,14 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface DMBaseViewController : UIViewController
 
 @property (nonatomic , strong) UILabel *vcTitleLab;
-
-@property (nonatomic , strong) MBProgressHUD * mbHud;
-- (void)showHUD;
-- (void)hideHUD;
 
 @end

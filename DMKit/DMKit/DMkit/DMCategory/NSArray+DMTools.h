@@ -10,10 +10,10 @@
 
 @interface NSArray (DMTools)
 
-
 - (id)dm_firstObject;
+- (id)dm_lastObject;
 
-- (id)dm_objectAtIndex:(NSUInteger)index;
+- (id)dm_objectAtIndex:(NSInteger)index;
 
 - (BOOL)dm_hasString:(NSString *)string;
 - (BOOL)dm_hasObject:(NSObject *)object;

@@ -10,8 +10,6 @@
 
 #import "DMDefine.h"
 
-#import <Masonry/Masonry.h>
-
 @interface DMBaseAlertView ()
 
 @end

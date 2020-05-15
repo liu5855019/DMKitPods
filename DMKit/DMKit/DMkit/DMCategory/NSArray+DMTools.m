@@ -15,9 +15,14 @@
     return [self dm_objectAtIndex:0];
 }
 
-- (id)dm_objectAtIndex:(NSUInteger)index
+- (id)dm_lastObject
 {
-    if (index >= self.count) {
+    return [self dm_objectAtIndex:self.count-1];
+}
+
+- (id)dm_objectAtIndex:(NSInteger)index
+{
+    if (index >= self.count || index < 0) {
         return nil;
     }
     return [self objectAtIndex:index];
@@ -44,6 +49,7 @@
 }
 
 
+/** 归类函数:返回归类排序结果 block:用于类似通讯录的排序 */
 - (NSMutableArray *)classifyWithKey:(NSString *)key block:(void (^)(NSMutableArray *keys , NSMutableArray *valueArrays))block
 {
     // 生成归类的keys

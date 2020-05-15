@@ -29,6 +29,9 @@
 /** 增加指定颜色阴影 */
 - (void)addBCShaadowWith:(UIColor *)color;
 
+/** 增加带圆角指定颜色阴影 */
+- (void)addCornerShadowWith:(UIColor *)color;
+- (void)addCornerShadowWith:(UIColor *)color hasBorder:(BOOL)hasBorder;
 
 
 @end

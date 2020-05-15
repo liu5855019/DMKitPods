@@ -12,9 +12,6 @@
 #import "UIView+DMTools.h"
 #import "NSArray+DMTools.h"
 
-#import <Masonry/Masonry.h>
-
-
 @interface DMPickerView () <UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property (nonatomic , strong) UIColor *sureColor;

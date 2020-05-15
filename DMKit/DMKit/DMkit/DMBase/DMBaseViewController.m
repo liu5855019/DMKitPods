@@ -37,28 +37,6 @@
     return _vcTitleLab;
 }
 
-#pragma mark - MBHud
-- (MBProgressHUD *)mbHud
-{
-    if (_mbHud == nil) {
-        _mbHud = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:_mbHud];
-    }
-    return _mbHud;
-}
-
-- (void)showHUD
-{
-    [self.view bringSubviewToFront:self.mbHud];
-    
-    [self.mbHud showAnimated:YES];
-}
-
-- (void)hideHUD
-{
-    [self.mbHud hideAnimated:YES];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

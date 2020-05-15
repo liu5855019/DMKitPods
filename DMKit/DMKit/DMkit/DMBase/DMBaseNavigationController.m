@@ -29,7 +29,7 @@
     
 }
 
-/*   设置push的时候隐藏tabbar */
+/** 设置push的时候隐藏tabbar */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.viewControllers.count > 0) {

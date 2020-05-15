@@ -73,7 +73,7 @@
     }];
 }
 
--(void)closeImageView
+- (void)closeImageView
 {
     WeakObj(self);
     [UIView animateWithDuration:0.25 animations:^{

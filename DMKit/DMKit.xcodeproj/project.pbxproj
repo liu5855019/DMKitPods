@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A27DCAA246E662100A84E1C /* DMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A27DCA9246E662100A84E1C /* DMSegmentView.m */; };
+		0A27DCAE246E66D000A84E1C /* DMItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A27DCAD246E66D000A84E1C /* DMItemsVC.m */; };
+		0A27DCB1246E670E00A84E1C /* DMItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A27DCB0246E670E00A84E1C /* DMItemsView.m */; };
+		0A3BAB12246501F1001B0DAE /* DMTools+DMCopyToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BAB11246501F1001B0DAE /* DMTools+DMCopyToast.m */; };
+		0A3BAB16246503F1001B0DAE /* DMTools+DMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BAB15246503F1001B0DAE /* DMTools+DMToast.m */; };
+		0A3BAB3E2465422E001B0DAE /* UIViewController+DMCopyMBHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BAB3D2465422E001B0DAE /* UIViewController+DMCopyMBHud.m */; };
+		0A3BAB4424654ACC001B0DAE /* UIViewController+DMMBHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BAB4324654ACC001B0DAE /* UIViewController+DMMBHud.m */; };
 		0A4ADB692374003900DB5643 /* DemoRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB682374003900DB5643 /* DemoRootVC.m */; };
 		0A4ADB6D2374017600DB5643 /* DMSegmentViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB6C2374017600DB5643 /* DMSegmentViewVC.m */; };
 		0A4ADB7023740A9B00DB5643 /* DMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4ADB6F23740A9B00DB5643 /* DMPickerView.m */; };
@@ -38,12 +45,11 @@
 		0A9A6E4D231635CA006F2667 /* NSString+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E44231635CA006F2667 /* NSString+DMTools.m */; };
 		0A9A6E4E231635CA006F2667 /* CADisplayLink+DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */; };
 		0A9A6EA123167603006F2667 /* DMDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E8E23167602006F2667 /* DMDatePickerView.m */; };
-		0A9A6EA223167603006F2667 /* DMShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E8F23167602006F2667 /* DMShadowView.m */; };
-		0A9A6EA423167603006F2667 /* DMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9423167602006F2667 /* DMSegmentView.m */; };
-		0A9A6EA623167603006F2667 /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9923167603006F2667 /* DMWebView.m */; };
-		0A9A6EA723167603006F2667 /* DMItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9B23167603006F2667 /* DMItemsView.m */; };
+		0A9A6EA223167603006F2667 /* DMCopyShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E8F23167602006F2667 /* DMCopyShadowView.m */; };
+		0A9A6EA423167603006F2667 /* DMCopySegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9423167602006F2667 /* DMCopySegmentView.m */; };
+		0A9A6EA723167603006F2667 /* DMCopyItemsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9B23167603006F2667 /* DMCopyItemsView.m */; };
 		0A9A6EA823167603006F2667 /* DMShowBigImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */; };
-		0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9F23167603006F2667 /* DMWKWebView.m */; };
+		0A9A6EAA23167603006F2667 /* DMCopyWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6E9F23167603006F2667 /* DMCopyWKWebView.m */; };
 		0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A6EAC231685A0006F2667 /* DMScreen.m */; };
 		0AFDEC172322511800047E03 /* DMBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFDEC162322511800047E03 /* DMBaseAlertView.m */; };
 		37FE193A2CDE02A6BDE72863 /* Pods_DMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE086EEF8401F6DCF081FB /* Pods_DMKit.framework */; };
@@ -51,6 +57,20 @@
 
 /* Begin PBXFileReference section */
 		07D29B10BBC474E648050754 /* Pods-DMKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMKit.debug.xcconfig"; path = "Target Support Files/Pods-DMKit/Pods-DMKit.debug.xcconfig"; sourceTree = "<group>"; };
+		0A27DCA8246E662100A84E1C /* DMSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMSegmentView.h; sourceTree = "<group>"; };
+		0A27DCA9246E662100A84E1C /* DMSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMSegmentView.m; sourceTree = "<group>"; };
+		0A27DCAC246E66C600A84E1C /* DMItemsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMItemsVC.h; sourceTree = "<group>"; };
+		0A27DCAD246E66D000A84E1C /* DMItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMItemsVC.m; sourceTree = "<group>"; };
+		0A27DCAF246E670E00A84E1C /* DMItemsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMItemsView.h; sourceTree = "<group>"; };
+		0A27DCB0246E670E00A84E1C /* DMItemsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMItemsView.m; sourceTree = "<group>"; };
+		0A3BAB10246501F1001B0DAE /* DMTools+DMCopyToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMTools+DMCopyToast.h"; sourceTree = "<group>"; };
+		0A3BAB11246501F1001B0DAE /* DMTools+DMCopyToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DMTools+DMCopyToast.m"; sourceTree = "<group>"; };
+		0A3BAB14246503F1001B0DAE /* DMTools+DMToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMTools+DMToast.h"; sourceTree = "<group>"; };
+		0A3BAB15246503F1001B0DAE /* DMTools+DMToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DMTools+DMToast.m"; sourceTree = "<group>"; };
+		0A3BAB3C2465422E001B0DAE /* UIViewController+DMCopyMBHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DMCopyMBHud.h"; sourceTree = "<group>"; };
+		0A3BAB3D2465422E001B0DAE /* UIViewController+DMCopyMBHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DMCopyMBHud.m"; sourceTree = "<group>"; };
+		0A3BAB4224654ACC001B0DAE /* UIViewController+DMMBHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DMMBHud.h"; sourceTree = "<group>"; };
+		0A3BAB4324654ACC001B0DAE /* UIViewController+DMMBHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DMMBHud.m"; sourceTree = "<group>"; };
 		0A4ADB672374003900DB5643 /* DemoRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoRootVC.h; sourceTree = "<group>"; };
 		0A4ADB682374003900DB5643 /* DemoRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoRootVC.m; sourceTree = "<group>"; };
 		0A4ADB6B2374017600DB5643 /* DMSegmentViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSegmentViewVC.h; sourceTree = "<group>"; };
@@ -111,20 +131,18 @@
 		0A9A6E42231635C8006F2667 /* UIImage+DMTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DMTools.h"; sourceTree = "<group>"; };
 		0A9A6E44231635CA006F2667 /* NSString+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DMTools.m"; sourceTree = "<group>"; };
 		0A9A6E45231635CA006F2667 /* CADisplayLink+DMTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+DMTools.m"; sourceTree = "<group>"; };
-		0A9A6E8D23167602006F2667 /* DMWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWKWebView.h; sourceTree = "<group>"; };
+		0A9A6E8D23167602006F2667 /* DMCopyWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCopyWKWebView.h; sourceTree = "<group>"; };
 		0A9A6E8E23167602006F2667 /* DMDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDatePickerView.m; sourceTree = "<group>"; };
-		0A9A6E8F23167602006F2667 /* DMShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMShadowView.m; sourceTree = "<group>"; };
-		0A9A6E9023167602006F2667 /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
+		0A9A6E8F23167602006F2667 /* DMCopyShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCopyShadowView.m; sourceTree = "<group>"; };
 		0A9A6E9123167602006F2667 /* DMShowBigImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShowBigImageView.h; sourceTree = "<group>"; };
-		0A9A6E9423167602006F2667 /* DMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSegmentView.m; sourceTree = "<group>"; };
-		0A9A6E9723167603006F2667 /* DMShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMShadowView.h; sourceTree = "<group>"; };
-		0A9A6E9823167603006F2667 /* DMSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSegmentView.h; sourceTree = "<group>"; };
-		0A9A6E9923167603006F2667 /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
-		0A9A6E9A23167603006F2667 /* DMItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMItemsView.h; sourceTree = "<group>"; };
-		0A9A6E9B23167603006F2667 /* DMItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMItemsView.m; sourceTree = "<group>"; };
+		0A9A6E9423167602006F2667 /* DMCopySegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCopySegmentView.m; sourceTree = "<group>"; };
+		0A9A6E9723167603006F2667 /* DMCopyShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCopyShadowView.h; sourceTree = "<group>"; };
+		0A9A6E9823167603006F2667 /* DMCopySegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCopySegmentView.h; sourceTree = "<group>"; };
+		0A9A6E9A23167603006F2667 /* DMCopyItemsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMCopyItemsView.h; sourceTree = "<group>"; };
+		0A9A6E9B23167603006F2667 /* DMCopyItemsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCopyItemsView.m; sourceTree = "<group>"; };
 		0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMShowBigImageView.m; sourceTree = "<group>"; };
 		0A9A6E9D23167603006F2667 /* DMDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDatePickerView.h; sourceTree = "<group>"; };
-		0A9A6E9F23167603006F2667 /* DMWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWKWebView.m; sourceTree = "<group>"; };
+		0A9A6E9F23167603006F2667 /* DMCopyWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCopyWKWebView.m; sourceTree = "<group>"; };
 		0A9A6EAB231685A0006F2667 /* DMScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMScreen.h; sourceTree = "<group>"; };
 		0A9A6EAC231685A0006F2667 /* DMScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMScreen.m; sourceTree = "<group>"; };
 		0AFDEC152322511800047E03 /* DMBaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseAlertView.h; sourceTree = "<group>"; };
@@ -154,9 +172,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0A27DCAB246E66A300A84E1C /* DMItemsVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A27DCAC246E66C600A84E1C /* DMItemsVC.h */,
+				0A27DCAD246E66D000A84E1C /* DMItemsVC.m */,
+			);
+			path = DMItemsVC;
+			sourceTree = "<group>";
+		};
+		0A3BAB13246503B0001B0DAE /* DMCopy */ = {
+			isa = PBXGroup;
+			children = (
+				0A3BAB14246503F1001B0DAE /* DMTools+DMToast.h */,
+				0A3BAB15246503F1001B0DAE /* DMTools+DMToast.m */,
+				0A3BAB4224654ACC001B0DAE /* UIViewController+DMMBHud.h */,
+				0A3BAB4324654ACC001B0DAE /* UIViewController+DMMBHud.m */,
+				0A27DCA8246E662100A84E1C /* DMSegmentView.h */,
+				0A27DCA9246E662100A84E1C /* DMSegmentView.m */,
+				0A27DCAF246E670E00A84E1C /* DMItemsView.h */,
+				0A27DCB0246E670E00A84E1C /* DMItemsView.m */,
+			);
+			path = DMCopy;
+			sourceTree = "<group>";
+		};
 		0A4ADB662373FFC300DB5643 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				0A3BAB13246503B0001B0DAE /* DMCopy */,
+				0A27DCAB246E66A300A84E1C /* DMItemsVC */,
 				0A4ADB6A2374014C00DB5643 /* DMSegmentViewVC */,
 				0A4ADB7123740D7700DB5643 /* DMPickerVC */,
 				0A4ADB752374102800DB5643 /* DMDatePickerVC */,
@@ -254,18 +298,8 @@
 				0A4ADB6F23740A9B00DB5643 /* DMPickerView.m */,
 				0A9A6E9D23167603006F2667 /* DMDatePickerView.h */,
 				0A9A6E8E23167602006F2667 /* DMDatePickerView.m */,
-				0A9A6E9A23167603006F2667 /* DMItemsView.h */,
-				0A9A6E9B23167603006F2667 /* DMItemsView.m */,
-				0A9A6E9823167603006F2667 /* DMSegmentView.h */,
-				0A9A6E9423167602006F2667 /* DMSegmentView.m */,
 				0A9A6E9123167602006F2667 /* DMShowBigImageView.h */,
 				0A9A6E9C23167603006F2667 /* DMShowBigImageView.m */,
-				0A9A6E9723167603006F2667 /* DMShadowView.h */,
-				0A9A6E8F23167602006F2667 /* DMShadowView.m */,
-				0A9A6E9023167602006F2667 /* DMWebView.h */,
-				0A9A6E9923167603006F2667 /* DMWebView.m */,
-				0A9A6E8D23167602006F2667 /* DMWKWebView.h */,
-				0A9A6E9F23167603006F2667 /* DMWKWebView.m */,
 			);
 			path = DMViews;
 			sourceTree = "<group>";
@@ -324,6 +358,18 @@
 				0A9A6E11231622A1006F2667 /* DMCopyNet.m */,
 				0A9A6E10231622A1006F2667 /* DMCopyUserInfo.h */,
 				0A9A6E13231622A1006F2667 /* DMCopyUserInfo.m */,
+				0A3BAB10246501F1001B0DAE /* DMTools+DMCopyToast.h */,
+				0A3BAB11246501F1001B0DAE /* DMTools+DMCopyToast.m */,
+				0A3BAB3C2465422E001B0DAE /* UIViewController+DMCopyMBHud.h */,
+				0A3BAB3D2465422E001B0DAE /* UIViewController+DMCopyMBHud.m */,
+				0A9A6E9A23167603006F2667 /* DMCopyItemsView.h */,
+				0A9A6E9B23167603006F2667 /* DMCopyItemsView.m */,
+				0A9A6E9823167603006F2667 /* DMCopySegmentView.h */,
+				0A9A6E9423167602006F2667 /* DMCopySegmentView.m */,
+				0A9A6E9723167603006F2667 /* DMCopyShadowView.h */,
+				0A9A6E8F23167602006F2667 /* DMCopyShadowView.m */,
+				0A9A6E8D23167602006F2667 /* DMCopyWKWebView.h */,
+				0A9A6E9F23167603006F2667 /* DMCopyWKWebView.m */,
 			);
 			path = DMCopy;
 			sourceTree = "<group>";
@@ -466,17 +512,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A9A6EA723167603006F2667 /* DMItemsView.m in Sources */,
+				0A3BAB16246503F1001B0DAE /* DMTools+DMToast.m in Sources */,
+				0A9A6EA723167603006F2667 /* DMCopyItemsView.m in Sources */,
+				0A3BAB4424654ACC001B0DAE /* UIViewController+DMMBHud.m in Sources */,
 				0A9A6E2E231622A4006F2667 /* UINavigationBar+DMTools.m in Sources */,
 				0A9A6E4C231635CA006F2667 /* NSData+DMTools.m in Sources */,
 				0AFDEC172322511800047E03 /* DMBaseAlertView.m in Sources */,
 				0A9A6DF723162203006F2667 /* ViewController.m in Sources */,
 				0A9A6E4A231635CA006F2667 /* UIColor+DMTools.m in Sources */,
-				0A9A6EA623167603006F2667 /* DMWebView.m in Sources */,
 				0A9A6E2D231622A4006F2667 /* UIViewController+DMTools.m in Sources */,
 				0A9A6E30231622A4006F2667 /* ImagePickerTool.m in Sources */,
 				0A9A6EA823167603006F2667 /* DMShowBigImageView.m in Sources */,
 				0A9A6E47231635CA006F2667 /* NSDate+DMTools.m in Sources */,
+				0A27DCB1246E670E00A84E1C /* DMItemsView.m in Sources */,
 				0A9A6E4E231635CA006F2667 /* CADisplayLink+DMTools.m in Sources */,
 				0A9A6E2F231622A4006F2667 /* NSArray+DMTools.m in Sources */,
 				0A9A6E49231635CA006F2667 /* NSObject+DMTools.m in Sources */,
@@ -488,20 +536,24 @@
 				0A9A6DF423162203006F2667 /* AppDelegate.m in Sources */,
 				0A4ADB7423740DA700DB5643 /* DMPickerVC.m in Sources */,
 				0A9A6E2C231622A4006F2667 /* DMBaseViewController.m in Sources */,
-				0A9A6EAA23167603006F2667 /* DMWKWebView.m in Sources */,
+				0A27DCAE246E66D000A84E1C /* DMItemsVC.m in Sources */,
+				0A9A6EAA23167603006F2667 /* DMCopyWKWebView.m in Sources */,
 				0A9A6E31231622A4006F2667 /* LocationTool.m in Sources */,
 				0A9A6E32231622A4006F2667 /* DMLanguageTool.m in Sources */,
 				0A9A6E4B231635CA006F2667 /* UIView+DMTools.m in Sources */,
+				0A3BAB3E2465422E001B0DAE /* UIViewController+DMCopyMBHud.m in Sources */,
 				0A9A6E48231635CA006F2667 /* UIImage+DMTools.m in Sources */,
 				0A9A6EAD231685A0006F2667 /* DMScreen.m in Sources */,
 				0A9A6E2A231622A4006F2667 /* DMCopyNet.m in Sources */,
 				0A4ADB6D2374017600DB5643 /* DMSegmentViewVC.m in Sources */,
 				0A9A6E28231622A4006F2667 /* DMBaseNavigationController.m in Sources */,
-				0A9A6EA223167603006F2667 /* DMShadowView.m in Sources */,
+				0A27DCAA246E662100A84E1C /* DMSegmentView.m in Sources */,
+				0A9A6EA223167603006F2667 /* DMCopyShadowView.m in Sources */,
 				0A4ADB692374003900DB5643 /* DemoRootVC.m in Sources */,
 				0A4ADB782374105E00DB5643 /* DMDatePickerVC.m in Sources */,
 				0A9A6E4D231635CA006F2667 /* NSString+DMTools.m in Sources */,
-				0A9A6EA423167603006F2667 /* DMSegmentView.m in Sources */,
+				0A9A6EA423167603006F2667 /* DMCopySegmentView.m in Sources */,
+				0A3BAB12246501F1001B0DAE /* DMTools+DMCopyToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +704,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daimu.DMKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -671,6 +724,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daimu.DMKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

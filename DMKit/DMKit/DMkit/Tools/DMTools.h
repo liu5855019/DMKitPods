@@ -6,7 +6,6 @@
 //  Copyright © 2017年 呆木. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -22,44 +21,53 @@
                   resultBlock:(void (^)(BOOL isNeed))block;
 
 
-#pragma mark - <<Alert & Sheet & Toast>>
+#pragma mark - << Alert & Sheet >>
 
-/** 弹出对话框,只有确定按钮 */
+/** 弹出对话框 , 只有确定按钮 */
 + (void)showAlertWithTitle:(NSString *)title
-                andContent:(NSString *)content
-                  andBlock:(void (^)(void))todo
-                      atVC:(__weak UIViewController *)vc;
+                   content:(NSString *)content
+                      atVC:(__weak UIViewController *)vc
+                 sureTitle:(NSString *)sureTitle
+                 sureBlock:(void (^)(void))sureBlock;
 
 /** 弹出对话框,带确定和取消按钮,可定制确定取消的标题 */
 + (void)showAlertWithTitle:(NSString *)title
-                andContent:(NSString *)content
-              andSureBlock:(void(^)(void))sureTodo
-            andCancelBlock:(void(^)(void))cancelTodo
-              andSureTitle:(NSString *)sureTitle
-            andCancelTitle:(NSString *)cancelTitle
-                      atVC:(__weak UIViewController *)vc;
+                   content:(NSString *)content
+                      atVC:(__weak UIViewController *)vc
+                 sureTitle:(NSString *)sureTitle
+               cancelTitle:(NSString *)cancelTitle
+                 sureBlock:(void(^)(void))sureBlock
+               cancelBlock:(void(^)(void))cancelBlock;
+
 
 /** 弹出sheet,根据数组弹出不同个数的action,外带取消按钮 */
-+(void)showSheetWithTitle:(NSString *)title
++ (void)showSheetWithTitle:(NSString *)title
                andContent:(NSString *)content
           andActionTitles:(NSArray <NSString*> *)titles
               cancelTitle:(NSString *)cancelTitle
                      atVC:(__weak UIViewController *)vc
                     block:(void (^)(int index))block;
 
-/** 在window上显示toast */
-+ (void)showToastAtWindow:(NSString *)content;
++ (void)showAlertWithTitle:(NSString *)title
+                andContent:(NSString *)content
+                  andBlock:(void (^)(void))todo
+                      atVC:(__weak UIViewController *)vc __attribute__((deprecated("After 1.4.0 Use showAlertWithTitle: content: ...")));
 
-/** 在window上显示toast */
-+ (void)showToastAtWindow:(NSString *)content duration:(NSTimeInterval)time position:(id)obj;
++ (void)showAlertWithTitle:(NSString *)title
+                andContent:(NSString *)content
+              andSureBlock:(void(^)(void))sureTodo
+            andCancelBlock:(void(^)(void))cancelTodo
+              andSureTitle:(NSString *)sureTitle
+            andCancelTitle:(NSString *)cancelTitle
+                      atVC:(__weak UIViewController *)vc __attribute__((deprecated("After 1.4.0 Use showAlertWithTitle: content: ...")));
 
 #pragma mark - <<Tools>>
 
 /** 检查一个对象是否为空 */
-+ (BOOL) checkIsNullObject:(id)anObject;
++ (BOOL)checkIsNullObject:(id)anObject;
 
 /** 从一个nsobject中根据属性获得dict 目前只支持字符串类型*/
-+ (NSDictionary *) getDictFromObject:(NSObject *)object;
++ (NSDictionary *)getDictFromObject:(NSObject *)object;
 
 /** 判断是否为中文简体 */
 + (BOOL)isSimpleChinese;
@@ -71,7 +79,7 @@
 + (NSString *)getJsonFromDictOrArray:(id)theData;
 
 /** jsonStr >>>>>>> dict or array */
-+ (id) getDictOrArrayFromJsonStr:(NSString *)json;
++ (id)getDictOrArrayFromJsonStr:(NSString *)json;
 
 /** 根据起始数字 终点数字 和 持续时间 返回 每秒60次的播放数组 */
 + (NSArray *)getNumsWithFrom:(CGFloat)from To:(CGFloat)to Time:(CGFloat)time;
@@ -83,15 +91,13 @@
 #pragma mark - << NSUserDefults >>
 
 /** 存储用户偏好设置 到 NSUserDefults */
-+(void)saveUserData:(id <NSCoding>)data forKey:(NSString*)key;
++ (void)saveUserData:(id <NSCoding>)data forKey:(NSString*)key;
 
 /** 读取用户偏好设置 */
-+(id)readUserDataForKey:(NSString*)key;
++ (id)readUserDataForKey:(NSString*)key;
 
 /** 删除用户偏好设置*/
-+(void)removeUserDataForkey:(NSString*)key;
-
-
++ (void)removeUserDataForkey:(NSString*)key;
 
 #pragma mark - << Documents >>
 /*
@@ -107,14 +113,13 @@
  */
 
 /** 给出文件名获得其在doc中的路径 */
-+(NSString *)filePathInDocuntsWithFile:(NSString *)file;
++ (NSString *)filePathInDocuntsWithFile:(NSString *)file;
 
 /** 给出文件名获得其在Cache中的路径 */
-+(NSString *)filePathInCachesWithFile:(NSString *)file;
++ (NSString *)filePathInCachesWithFile:(NSString *)file;
 
 /** 给出文件名获得其在Tmp中的路径 */
-+(NSString *)filePathInTmpWithFile:(NSString *)file;
-
++ (NSString *)filePathInTmpWithFile:(NSString *)file;
 
 #pragma mark - << FileManager >>
 
@@ -145,7 +150,7 @@
 #pragma mark - << String >>
 
 /** 计算文字所占位置大小 */
-+ (CGRect) getRectByStr:(NSString *)str fontSize:(NSInteger )textSize maxW:(CGFloat)maxWidth maxH:(CGFloat)maxHeight;
++ (CGRect)getRectByStr:(NSString *)str fontSize:(NSInteger )textSize maxW:(CGFloat)maxWidth maxH:(CGFloat)maxHeight;
 
 /** 比较版本号大小 : 3.2.1 > 3.2.0    4 > 3.02.1  只有大于才会yes  其他no */
 + (BOOL)version1:(NSString *)str1 greatThanVersion2:(NSString *)str2;
@@ -170,7 +175,5 @@
 
 /** 车牌号验证 */
 + (BOOL)checkCarNumber:(NSString *) CarNumber;
-
-
 
 @end

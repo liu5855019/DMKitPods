@@ -10,10 +10,15 @@
 
 @interface NSDate (DMTools)
 
-#define yyyyMMddHHmmss @"yyyy/MM/dd HH:mm:ss"
-#define yyyyMMddHHmm  @"yyyy/MM/dd HH:mm"
-#define yyyyMMdd @"yyyy/MM/dd"
-#define HHmmss @"HH:mm:ss"
+#define yyyyMMddHHmmss      @"yyyy/MM/dd HH:mm:ss"
+#define yyyyMMddHHmm        @"yyyy/MM/dd HH:mm"
+#define yyyyMMdd            @"yyyy/MM/dd"
+
+#define yyyy_MM_ddHHmmss    @"yyyy/MM/dd HH:mm:ss"
+#define yyyy_MM_ddHHmm      @"yyyy/MM/dd HH:mm"
+#define yyyy_MM_dd          @"yyyy/MM/dd"
+
+#define HHmmss              @"HH:mm:ss"
 
 #pragma mark - formatter
 
